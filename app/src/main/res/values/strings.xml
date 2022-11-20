@@ -30,5 +30,9 @@
     <string name="sign_up_with_google">Sign Up with Google
 </string>
     <string name="forgot_password">Forgot Password?</string>
+    <string name="forgot_password_description">Don’t worry. Enter your email and we’ll send you a link to reset your password.</string>
+
     <string name="dont_have_account">DOn\'t have an account yet? Sign Up</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

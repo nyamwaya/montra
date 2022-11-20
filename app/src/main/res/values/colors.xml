@@ -15,5 +15,6 @@
     <color name="dark_50">#212325</color>
     <color name="light_20">#91919F</color>
     <color name="light_80">#FCFCFC</color>
+    <color name="dark_100">#0D0E0F</color>
 
 </resources>

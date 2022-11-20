@@ -21,5 +21,8 @@
     <dimen name="margin40">40dp</dimen>
     <dimen name="margin33">33dp</dimen>
     <dimen name="margin38">38dp</dimen>
+    <dimen name="margin69">69dp</dimen>
+    <dimen name="textSize24">24sp</dimen>
+    <dimen name="margin46">46dp</dimen>
 
 </resources>
