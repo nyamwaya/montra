@@ -17,5 +17,9 @@
     <dimen name="textSize18">18sp</dimen>
     <dimen name="padding62">62dp</dimen>
     <dimen name="margin28">28dp</dimen>
+    <dimen name="height64">64dp</dimen>
+    <dimen name="margin40">40dp</dimen>
+    <dimen name="margin33">33dp</dimen>
+    <dimen name="margin38">38dp</dimen>
 
 </resources>
