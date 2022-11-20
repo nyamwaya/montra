@@ -6,5 +6,13 @@
     <dimen name="textSize16">16sp</dimen>
     <dimen name="margin24">24dp</dimen>
     <dimen name="margin56">56dp</dimen>
+    <dimen name="margin17">17dp</dimen>
+    <dimen name="margin37">37dp</dimen>
+    <dimen name="margin16">16dp</dimen>
+    <dimen name="margin8">8dp</dimen>
+    <dimen name="margin27">27dp</dimen>
+    <dimen name="margin64">64dp</dimen>
+    <dimen name="margin12">12dp</dimen>
+    <dimen name="margin19">19sp</dimen>
 
 </resources>

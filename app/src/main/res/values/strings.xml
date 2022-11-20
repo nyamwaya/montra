@@ -23,5 +23,8 @@
     <string name="pleace_holder_name">Name</string>
     <string name="pleace_holder_email">Email</string>
     <string name="pleace_holder_password">Password</string>
+    <string name="sign_up_legal_warning">By signing up, you agree to the Terms of Service and \nPrivacy Policy.</string>
+    <string name="or_with">Or with</string>
+    <string name="already_have">Already have an account? Login</string>
 
 </resources>

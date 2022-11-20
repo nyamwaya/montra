@@ -11,7 +11,7 @@
         layout="@layout/navigation_bar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="64dp" />
+        android:layout_marginTop="@dimen/margin64" />
 
 
     <com.google.android.material.textfield.TextInputLayout
@@ -74,21 +74,68 @@
         android:id="@+id/show_password"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/show"
-        android:layout_marginEnd="16dp"
-        android:layout_marginTop="37dp"
+        android:layout_marginTop="@dimen/margin37"
+        android:layout_marginEnd="@dimen/margin16"
         android:background="@color/white"
+        android:src="@drawable/show"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/email"
-        />
+        app:layout_constraintTop_toBottomOf="@+id/email" />
 
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:id="@+id/sometext"
+    <androidx.appcompat.widget.AppCompatCheckBox
+        android:id="@+id/terms_and_conditions_checkbox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/login_fragment_label"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+        android:layout_marginStart="@dimen/margin16"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/password" />
+
+    <TextView
+        android:id="@+id/legal_warning"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin8"
+        android:fontFamily="@font/inter_500_medium"
+        android:text="@string/sign_up_legal_warning"
+        android:textAlignment="textStart"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@+id/terms_and_conditions_checkbox"
+        app:layout_constraintTop_toBottomOf="@+id/password" />
+
+    <include
+        android:id="@+id/btn_signup"
+        layout="@layout/button_signup_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin27"
+        app:layout_constraintTop_toBottomOf="@+id/legal_warning" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/or_with"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/or_with"
+        android:fontFamily="@font/inter_bold"
+        android:textSize="14sp"
+        android:textColor="@color/light_20"
+        android:layout_marginTop="@dimen/margin12"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_signup"/>
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/already_have"
+        android:fontFamily="@font/inter_500_medium"
+        android:textSize="@dimen/textSize16"
+        android:textColor="@color/light_20"
+        android:layout_marginTop="@dimen/margin19"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/or_with"/>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
