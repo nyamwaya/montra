@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import com.app.montra.R
 import com.app.montra.databinding.FragmentSignUpBinding
 
 class SignUpFragment : Fragment() {
@@ -18,6 +19,19 @@ class SignUpFragment : Fragment() {
     ): View {
         _binding = FragmentSignUpBinding.inflate(inflater, container, false)
         return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        setUpViews()
+    }
+
+    private fun setUpViews() {
+        binding.toolbar.screenLabel.setText(R.string.signup)
+        binding.btnOnboardingSignup.btnGenericLarge.setText(R.string.signup)
+        binding.toolbar.backBtn.setOnClickListener {
+            //TODO: navigate back
+        }
     }
 
 }

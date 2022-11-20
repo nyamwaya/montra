@@ -27,6 +27,7 @@ class OnBoardingFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         createViewPager()
         onClick()
+        setUpViews()
 
     }
 
@@ -36,8 +37,12 @@ class OnBoardingFragment : Fragment() {
         binding.indicator.setViewPager(viewPager)
     }
 
+    private fun setUpViews(){
+        binding.btnOnboardingSignup.btnGenericLarge.setText(R.string.signup)
+    }
+
     private fun onClick() {
-        binding.includeSignup.signupBtn.setOnClickListener {
+        binding.btnOnboardingSignup.btnGenericLarge.setOnClickListener {
             val action = OnBoardingFragmentDirections.actionOnboardingFragmentToSignupFragment()
             requireActivity().findNavController(R.id.nav_host_fragment).navigate(action)
         }

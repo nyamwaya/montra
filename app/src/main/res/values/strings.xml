@@ -1,6 +1,10 @@
 <resources>
     <string name="app_name">montra</string>
 
+    <!--generic-->
+    <string name="_continue">Continue</string>
+    <string name="ok">OK</string>
+
     <!--On-boarding-->
     <string name="onboarding_fragment_label">Onboardign Fragment</string>
     <string name="onboard_screen_one_heading">Gain total control \n of your money</string>
@@ -24,15 +28,17 @@
     <string name="pleace_holder_name">Name</string>
     <string name="pleace_holder_email">Email</string>
     <string name="pleace_holder_password">Password</string>
-    <string name="sign_up_legal_warning">By signing up, you agree to the Terms of Service and \nPrivacy Policy.</string>
+    <string name="sign_up_legal_warning">By signing up, you agree to the Terms of Service\n and Privacy Policy.</string>
     <string name="or_with">Or with</string>
     <string name="already_have">Already have an account? Login</string>
-    <string name="sign_up_with_google">Sign Up with Google
-</string>
+    <string name="sign_up_with_google">Sign Up with Google</string>
+
+    <!--Forgot password-->
     <string name="forgot_password">Forgot Password?</string>
     <string name="forgot_password_description">Don’t worry. Enter your email and we’ll send you a link to reset your password.</string>
+    <string name="forgot_password_email_description">Your email is on the way</string>
+    <string name="forgot_password_fragment_label">Hello blank fragment</string>
 
-    <string name="dont_have_account">DOn\'t have an account yet? Sign Up</string>
+    <string name="dont_have_account">Don\'t have an account yet? Sign Up</string>
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

@@ -52,8 +52,8 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <include
-        android:id="@+id/btn_signup"
-        layout="@layout/button_signup_view"
+        android:id="@+id/btn_login"
+        layout="@layout/btn_large_purple"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/margin40"
@@ -68,7 +68,7 @@
         android:fontFamily="@font/inter_600_semibold"
         android:layout_marginTop="@dimen/margin33"
         android:textColor="@color/violet_100"
-        app:layout_constraintTop_toBottomOf="@+id/btn_signup"
+        app:layout_constraintTop_toBottomOf="@+id/btn_login"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
 

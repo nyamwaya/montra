@@ -28,6 +28,16 @@
         android:id="@+id/login_fragment"
         android:name="com.app.montra.onboarding.LoginFragment"
         android:label="@string/login_fragment_label"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_login_fragment_to_forgot_password_fragment"
+            app:destination="@id/forgot_password_fragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/forgot_password_fragment"
+        android:name="com.app.montra.onboarding.ForgotPasswordFragment"
+        android:label="@string/forgot_password_fragment_label"
         tools:layout="@layout/fragment_login" />
 
 </navigation>

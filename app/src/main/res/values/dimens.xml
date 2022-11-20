@@ -24,5 +24,6 @@
     <dimen name="margin69">69dp</dimen>
     <dimen name="textSize24">24sp</dimen>
     <dimen name="margin46">46dp</dimen>
+    <dimen name="margin32">32dp</dimen>
 
 </resources>
