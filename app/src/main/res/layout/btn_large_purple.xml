@@ -9,7 +9,6 @@
         android:id="@+id/btn_generic_large"
         android:layout_width="match_parent"
         android:layout_height="56dp"
-        android:layout_marginHorizontal="20dp"
         android:background="@drawable/btn_large_violet"
         android:backgroundTint="@color/violet_100"
         android:fontFamily="@font/inter_600_semibold"

@@ -4,12 +4,11 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.fragment.app.Fragment
+import androidx.navigation.findNavController
 import com.app.montra.R
 import com.app.montra.databinding.FragmentForgotPasswordBinding
-import com.app.montra.databinding.FragmentSignUpBinding
 
-class ForgotPasswordFragment : Fragment() {
+class ForgotPasswordFragment : BaseFragment() {
 
     private lateinit var _binding: FragmentForgotPasswordBinding
     private val binding get() = _binding
@@ -17,26 +16,25 @@ class ForgotPasswordFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         _binding = FragmentForgotPasswordBinding.inflate(inflater, container, false)
         return binding.root
     }
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-        setUpViews()
-        onClick()
-    }
-
-    private fun setUpViews() {
+    override fun setUpViews() {
         binding.toolbar.screenLabel.setText(R.string.forgot_password)
         binding.btnContinue.btnGenericLarge.setText(R.string._continue)
 
     }
 
-    private fun onClick() {
+    override fun onClick() {
         binding.toolbar.backBtn.setOnClickListener {
             //TODO: navigate back
+        }
+
+        binding.btnContinue.btnGenericLarge.setOnClickListener {
+            val action = ForgotPasswordFragmentDirections.actionForgotPasswordFragmentToEmailSentFragment()
+            requireActivity().findNavController(R.id.nav_host_fragment).navigate(action)
         }
     }
 

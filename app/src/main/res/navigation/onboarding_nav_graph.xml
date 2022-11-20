@@ -22,7 +22,11 @@
         android:id="@+id/signup_fragment"
         android:name="com.app.montra.onboarding.SignUpFragment"
         android:label="@string/signup_fragment_label"
-        tools:layout="@layout/fragment_sign_up" />
+        tools:layout="@layout/fragment_sign_up" >
+        <action
+            android:id="@+id/action_signup_fragment_to_verification_fragment"
+            app:destination="@id/verification_fragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/login_fragment"
@@ -38,6 +42,27 @@
         android:id="@+id/forgot_password_fragment"
         android:name="com.app.montra.onboarding.ForgotPasswordFragment"
         android:label="@string/forgot_password_fragment_label"
-        tools:layout="@layout/fragment_login" />
+        tools:layout="@layout/fragment_forgot_password" >
+        <action
+            android:id="@+id/action_forgot_password_fragment_to_email_sent_fragment"
+            app:destination="@id/email_sent_fragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/email_sent_fragment"
+        android:name="com.app.montra.onboarding.EmailSentFragment"
+        android:label="@string/email_sent_fragment_label"
+        tools:layout="@layout/fragment_email_sent" >
+        <action
+            android:id="@+id/action_email_sent_fragment_to_login_fragment"
+            app:destination="@id/login_fragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/verification_fragment"
+        android:name="com.app.montra.onboarding.VerificationFragment"
+        android:label="@string/fragment_verification_label"
+        tools:layout="@layout/fragment_verification" >
+    </fragment>
 
 </navigation>

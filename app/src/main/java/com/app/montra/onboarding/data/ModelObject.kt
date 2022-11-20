@@ -1,4 +1,4 @@
-package com.app.montra.onboarding
+package com.app.montra.onboarding.data
 
 //noinspection SuspiciousImport
 import com.app.montra.R
