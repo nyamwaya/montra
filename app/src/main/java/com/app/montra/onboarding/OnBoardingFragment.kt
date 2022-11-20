@@ -37,7 +37,7 @@ class OnBoardingFragment : Fragment() {
     }
 
     private fun onClick() {
-        binding.signup.setOnClickListener {
+        binding.includeSignup.signupBtn.setOnClickListener {
             val action = OnBoardingFragmentDirections.actionOnboardingFragmentToSignupFragment()
             requireActivity().findNavController(R.id.nav_host_fragment).navigate(action)
         }

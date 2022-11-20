@@ -4,6 +4,6 @@
         <item>@font/inter</item>
         <item>@font/inter_bold</item>
         <item>@font/inter_500_medium</item>
-        <item>@font/inter_semibold</item>
+        <item>@font/inter_600_semibold</item>
     </array>
 </resources>

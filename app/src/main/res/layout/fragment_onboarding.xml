@@ -30,7 +30,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <include
-        android:id="@+id/signup"
+        android:id="@+id/include_signup"
         layout="@layout/button_signup_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -63,13 +63,13 @@
         android:height="56dp"
         android:background="@drawable/login_button"
         android:backgroundTint="@color/violet_20"
-        android:fontFamily="@font/inter_semibold"
+        android:fontFamily="@font/inter_600_semibold"
         android:text="@string/login"
         android:textAllCaps="false"
         android:textColor="@color/violet_100"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/signup" />
+        app:layout_constraintTop_toBottomOf="@id/include_signup" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

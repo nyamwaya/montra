@@ -75,7 +75,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/margin37"
-        android:layout_marginEnd="@dimen/margin16"
+        android:layout_marginEnd="@dimen/margin28"
         android:background="@color/white"
         android:src="@drawable/show"
         app:layout_constraintEnd_toEndOf="parent"
@@ -86,6 +86,7 @@
         android:id="@+id/terms_and_conditions_checkbox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:buttonTint="@color/purple_100"
         android:layout_marginStart="@dimen/margin16"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/password" />
@@ -125,6 +126,40 @@
         app:layout_constraintTop_toBottomOf="@+id/btn_signup"/>
 
 
+<!--    <androidx.appcompat.widget.AppCompatButton-->
+<!--        android:id="@+id/sign_up_with_google"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginHorizontal="@dimen/margin16"-->
+<!--        android:background="@drawable/btn_large"-->
+<!--        android:paddingStart="@dimen/padding62"-->
+<!--        android:text="@string/sign_up_with_google"-->
+<!--        android:textAlignment="viewStart"-->
+<!--        android:textAllCaps="false"-->
+<!--        android:textColor="@color/black"-->
+<!--        android:textSize="@dimen/textSize18"-->
+<!--        android:layout_marginTop="@dimen/margin12"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/or_with"-->
+<!--        tools:layout_editor_absoluteX="0dp"-->
+<!--        tools:ignore="RtlSymmetry" />-->
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/sign_up_with_google"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginHorizontal="@dimen/margin16"
+        android:background="@drawable/btn_large"
+        android:fontFamily="@font/inter_600_semibold"
+        android:text="@string/with_google"
+        android:paddingHorizontal="@dimen/padding62"
+        android:drawableStart="@drawable/flat_color_icons_google"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@+id/or_with"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textSize="18sp"/>
+
     <androidx.appcompat.widget.AppCompatTextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -132,10 +167,11 @@
         android:fontFamily="@font/inter_500_medium"
         android:textSize="@dimen/textSize16"
         android:textColor="@color/light_20"
+        android:gravity="center_vertical"
         android:layout_marginTop="@dimen/margin19"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/or_with"/>
+        app:layout_constraintTop_toBottomOf="@+id/sign_up_with_google"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

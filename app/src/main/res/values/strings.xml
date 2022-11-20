@@ -13,6 +13,7 @@
     <!--Sign Up Strings-->
     <string name="signup_fragment_label">SignUp Fragment</string>
     <string name="signup">Sign Up</string>
+    <string name="with_google">Sign Up with Google</string>
     <string name="login">Login</string>
 
     <!--Login Strings-->
@@ -26,5 +27,6 @@
     <string name="sign_up_legal_warning">By signing up, you agree to the Terms of Service and \nPrivacy Policy.</string>
     <string name="or_with">Or with</string>
     <string name="already_have">Already have an account? Login</string>
-
+    <string name="sign_up_with_google">Sign Up with Google
+</string>
 </resources>
