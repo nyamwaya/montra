@@ -19,5 +19,9 @@
     <string name="login_fragment_label">Login Fragment</string>
 
     <string name="accesibility_image_of_paper">image of paper</string>
+    <string name="placeholder">lorem ispum</string>
+    <string name="pleace_holder_name">Name</string>
+    <string name="pleace_holder_email">Email</string>
+    <string name="pleace_holder_password">Password</string>
 
 </resources>

@@ -1,4 +1,10 @@
 <resources>
     <dimen name="fab_margin">16dp</dimen>
     <dimen name="dp_350">350dp</dimen>
+    <dimen name="dp56">56dp</dimen>
+    <dimen name="padding16">16dp</dimen>
+    <dimen name="textSize16">16sp</dimen>
+    <dimen name="margin24">24dp</dimen>
+    <dimen name="margin56">56dp</dimen>
+
 </resources>
