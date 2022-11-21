@@ -1,9 +1,31 @@
 <resources>
+
+    <dimen name="height64">64dp</dimen>
+
     <dimen name="fab_margin">16dp</dimen>
     <dimen name="dp_350">350dp</dimen>
     <dimen name="dp56">56dp</dimen>
-    <dimen name="padding16">16dp</dimen>
     <dimen name="textSize16">16sp</dimen>
+    <dimen name="textSize24">24sp</dimen>
+    <dimen name="textSize36">36sp</dimen>
+    <dimen name="textSize48">48sp</dimen>
+    <dimen name="textSize18">18sp</dimen>
+
+    <dimen name="padding47">47dp</dimen>
+    <dimen name="padding62">62dp</dimen>
+    <dimen name="padding16">16dp</dimen>
+
+    <dimen name="margin29">29dp</dimen>
+    <dimen name="margin53">53dp</dimen>
+    <dimen name="margin92">92dp</dimen>
+    <dimen name="margin46">46dp</dimen>
+    <dimen name="margin32">32dp</dimen>
+    <dimen name="margin18">18dp</dimen>
+    <dimen name="margin40">40dp</dimen>
+    <dimen name="margin33">33dp</dimen>
+    <dimen name="margin38">38dp</dimen>
+    <dimen name="margin69">69dp</dimen>
+    <dimen name="margin28">28dp</dimen>
     <dimen name="margin24">24dp</dimen>
     <dimen name="margin56">56dp</dimen>
     <dimen name="margin17">17dp</dimen>
@@ -14,20 +36,6 @@
     <dimen name="margin64">64dp</dimen>
     <dimen name="margin12">12dp</dimen>
     <dimen name="margin19">19sp</dimen>
-    <dimen name="textSize18">18sp</dimen>
-    <dimen name="padding62">62dp</dimen>
-    <dimen name="margin28">28dp</dimen>
-    <dimen name="height64">64dp</dimen>
-    <dimen name="margin40">40dp</dimen>
-    <dimen name="margin33">33dp</dimen>
-    <dimen name="margin38">38dp</dimen>
-    <dimen name="margin69">69dp</dimen>
-    <dimen name="textSize24">24sp</dimen>
-    <dimen name="margin46">46dp</dimen>
-    <dimen name="margin32">32dp</dimen>
-    <dimen name="margin18">18dp</dimen>
-    <dimen name="textSize36">36sp</dimen>
-    <dimen name="margin29">29dp</dimen>
-    <dimen name="margin53">53dp</dimen>
+
 
 </resources>

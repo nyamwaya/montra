@@ -30,7 +30,7 @@
 
 
 
-    <com.app.montra.helper.PinEntryEditText
+    <com.app.montra.views.PinEntryEditText
         android:id="@+id/pin_entry_edit"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
