@@ -33,7 +33,7 @@ class OnboardingActivity : AppCompatActivity() {
     private fun setStatusBarColor() {
         window.statusBarColor = ContextCompat.getColor(
             this,
-            R.color.white
+            R.color.light_100
         )
     }
 

@@ -36,6 +36,14 @@
     <dimen name="margin64">64dp</dimen>
     <dimen name="margin12">12dp</dimen>
     <dimen name="margin19">19sp</dimen>
+    <dimen name="margin67">67dp</dimen>
+    <dimen name="textSize14">14sp</dimen>
+    <dimen name="margin148">148dp</dimen>
+    <dimen name="margin13">13dp</dimen>
+    <dimen name="textSize64">64sp</dimen>
+    <dimen name="padding28">28dp</dimen>
+    <dimen name="padding8">8dp</dimen>
+    <dimen name="width_large">128dp</dimen>
 
 
 </resources>

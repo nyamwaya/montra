@@ -9,7 +9,7 @@
         android:id="@+id/back_btn"
         android:layout_width="32dp"
         android:src="@drawable/arrow_left"
-        android:background="@color/white"
+        android:background="@color/light_100"
         android:layout_height="32dp"
         android:layout_marginStart="20dp"
         app:layout_constraintStart_toStartOf="parent"

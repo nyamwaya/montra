@@ -4,6 +4,7 @@
     <!--generic-->
     <string name="_continue">Continue</string>
     <string name="ok">OK</string>
+    <string name="lets_go">Let\'s go</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
     <!--On-boarding-->
@@ -68,4 +69,19 @@
     <string name="seven">7</string>
     <string name="eight">8</string>
     <string name="nine">9</string>
+    <string name="fragment_pin_entry_label">Enter Pin Fragment</string>
+
+
+    <!--Account Setup-->
+    <string name="account_setup_heading">Let’s setup your account!</string>
+    <string name="account_setup_subheading">Account can be your bank, credit card or your wallet.</string>
+    <string name="add_account">Add new account</string>
+    <string name="add_account_balance">Balance</string>
+    <string name="bank_label">Bank</string>
+    <string name="account_balance_placeholder">$0.00</string>
+    <string name="fragment_setup_label">Setup Account</string>
+    <string name="fragment_setup_success_label">Setup Success Fragment</string>
+    <string name="fragment_add_account_label">Add New Account Fragment</string>
+    <string name="all_set">You are set!</string>
+    <string name="fragment_reset_password_label">Reset Password_Fragment</string>
 </resources>

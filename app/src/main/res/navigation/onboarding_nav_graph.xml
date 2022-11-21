@@ -36,6 +36,9 @@
         <action
             android:id="@+id/action_login_fragment_to_forgot_password_fragment"
             app:destination="@id/forgot_password_fragment" />
+        <action
+            android:id="@+id/action_login_fragment_to_reset_password_fragment"
+            app:destination="@id/reset_password_fragment" />
     </fragment>
 
     <fragment
@@ -63,6 +66,54 @@
         android:name="com.app.montra.onboarding.VerificationFragment"
         android:label="@string/fragment_verification_label"
         tools:layout="@layout/fragment_verification" >
+
+        <action
+            android:id="@+id/action_verification_fragment_to_user_pin_fragment2"
+            app:destination="@id/user_pin_fragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/user_pin_fragment"
+        android:name="com.app.montra.onboarding.PinEntryFragment"
+        android:label="@string/fragment_pin_entry_label"
+        tools:layout="@layout/fragment_pin_entry" >
+        <action
+            android:id="@+id/action_user_pin_fragment_to_account_setup_fragment"
+            app:destination="@id/account_setup_fragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/account_setup_fragment"
+        android:name="com.app.montra.onboarding.SetUpAccountFragment"
+        android:label="@string/fragment_setup_label"
+        tools:layout="@layout/fragment_set_up_account" >
+        <action
+            android:id="@+id/action_account_setup_fragment_to_add_new_account_fragment"
+            app:destination="@id/add_new_account_fragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/add_new_account_fragment"
+        android:name="com.app.montra.onboarding.AddNewAccountFragment"
+        android:label="@string/fragment_add_account_label"
+        tools:layout="@layout/fragment_add_new_account" >
+        <action
+            android:id="@+id/action_add_new_account_fragment_to_setup_success_fragment"
+            app:destination="@id/setup_success_fragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/setup_success_fragment"
+        android:name="com.app.montra.onboarding.SetupFinishedFragment"
+        android:label="@string/fragment_setup_success_label"
+        tools:layout="@layout/fragment_setup_finished" >
+    </fragment>
+
+    <fragment
+        android:id="@+id/reset_password_fragment"
+        android:name="com.app.montra.onboarding.ResetPasswordFragment"
+        android:label="@string/fragment_reset_password_label"
+        tools:layout="@layout/fragment_reset_password" >
     </fragment>
 
 </navigation>

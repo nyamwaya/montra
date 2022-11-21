@@ -22,21 +22,34 @@
         app:layout_constraintStart_toStartOf="parent"/>
 
 
-    <com.app.montra.views.PinEntryEditText
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/pin_entry_edit"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="91dp"
         android:layout_marginTop="@dimen/margin92"
-        android:backgroundTint="@color/light_80"
-        android:cursorVisible="true"
-        android:digits="1234567890"
-        android:focusable="true"
-        android:inputType="number|numberPassword"
-        android:maxLength="4"
-        android:textColor="@color/light_80"
-        android:textIsSelectable="false"
-        android:textSize="15sp"
-        app:layout_constraintTop_toBottomOf="@+id/pin_entry_heading" />
+        app:layout_constraintTop_toBottomOf="@+id/pin_entry_heading"
+        android:layout_height="wrap_content">
+
+        <com.app.montra.views.PinEntryEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/light_80"
+            android:cursorVisible="true"
+            android:digits="1234567890"
+            android:focusable="true"
+            android:inputType="number|numberPassword"
+            android:maxLength="4"
+            android:textColor="@color/light_80"
+            android:textIsSelectable="false"
+            android:textSize="15sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/one"

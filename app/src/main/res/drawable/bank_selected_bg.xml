@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?><!-- drawable/chase.xml -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="80dp"
+    android:height="40dp"
+    android:viewportWidth="80"
+    android:viewportHeight="40">
+
+    <group>
+
+        <clip-path android:pathData="M8 0H72C76.4183 0 80 3.58172 80 8V32C80 36.4183 76.4183 40 72 40H8C3.58172 40 0 36.4183 0 32V8C0 3.58172 3.58172 0 8 0Z" />
+
+        <path
+            android:fillColor="#EEE5FF"
+            android:pathData="M0 0V40H80V0" />
+
+        <path
+            android:pathData="M8 0H72C76.4183 0 80 3.58172 80 8V32C80 36.4183 76.4183 40 72 40H8C3.58172 40 0 36.4183 0 32V8C0 3.58172 3.58172 0 8 0Z"
+            android:strokeWidth="2"
+            android:strokeColor="#7F3DFF" />
+
+    </group>
+
+</vector>
