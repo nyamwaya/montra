@@ -23,10 +23,31 @@
         android:layout_marginHorizontal="@dimen/textSize16"
         android:fontFamily="@font/inter_500_medium"
         android:textColor="@color/dark_100"
-        android:layout_marginBottom="@dimen/margin29"
-        app:layout_constraintBottom_toTopOf="@+id/timer"
+        android:layout_marginBottom="@dimen/margin53"
+        app:layout_constraintBottom_toTopOf="@+id/pin_entry_edit"
         app:layout_constraintStart_toStartOf="parent"
         />
+
+
+
+    <com.app.montra.helper.PinEntryEditText
+        android:id="@+id/pin_entry_edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:cursorVisible="true"
+        android:digits="1234567890"
+        android:focusable="true"
+        android:inputType="number|numberPassword"
+        android:maxLength="4"
+        android:textAlignment="textStart"
+        android:layout_marginBottom="@dimen/margin56"
+        android:textColor="@color/light_80"
+        android:textIsSelectable="false"
+        android:textSize="16sp"
+        android:layout_marginStart="@dimen/margin16"
+        app:layout_goneMarginStart="@dimen/margin16"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/conde_sent"/>
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/timer"
