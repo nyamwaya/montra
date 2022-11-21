@@ -7,7 +7,7 @@
     android:background="@color/violet_100"
     tools:context=".onboarding.PinEntryFragment">
 
-    <!-- TODO: Update blank fragment layout -->
+<!--    &lt;!&ndash; TODO: Update blank fragment layout &ndash;&gt;-->
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/pin_entry_heading"
         android:layout_width="wrap_content"
@@ -18,8 +18,8 @@
         android:textColor="@color/light_80"
         android:textSize="@dimen/textSize18"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
 
 
     <com.app.montra.views.PinEntryEditText
@@ -49,7 +49,6 @@
         android:paddingHorizontal="@dimen/padding47"
         android:paddingVertical="@dimen/padding16"
         app:layout_constraintBottom_toTopOf="@+id/four"
-        app:layout_constraintEnd_tStartOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <androidx.appcompat.widget.AppCompatTextView
@@ -91,7 +90,6 @@
         android:paddingHorizontal="@dimen/padding47"
         android:paddingVertical="@dimen/padding16"
         app:layout_constraintBottom_toTopOf="@+id/seven"
-        app:layout_constraintEnd_tStartOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
 
@@ -132,9 +130,8 @@
         android:fontFamily="@font/inter_500_medium"
         android:paddingHorizontal="@dimen/padding47"
         android:paddingVertical="@dimen/padding16"
-        app:layout_constraintBottom_toTopOf="@+id/zero"
-        app:layout_constraintEnd_tStartOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/zero"/>
 
 
     <androidx.appcompat.widget.AppCompatTextView
@@ -147,9 +144,9 @@
         android:fontFamily="@font/inter_500_medium"
         android:paddingHorizontal="@dimen/padding47"
         android:paddingVertical="@dimen/padding16"
-        app:layout_constraintBottom_toTopOf="@+id/zero"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/zero"/>
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/nine"
@@ -161,9 +158,8 @@
         android:fontFamily="@font/inter_500_medium"
         android:paddingHorizontal="@dimen/padding47"
         android:paddingVertical="@dimen/padding16"
-        app:layout_constraintBottom_toTopOf="@+id/zero"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndoF="@+id/eight" />
+        app:layout_constraintBottom_toTopOf="@+id/zero"/>
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/zero"
@@ -176,8 +172,8 @@
         android:paddingHorizontal="@dimen/padding47"
         android:paddingVertical="@dimen/padding16"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/continue_arrow"

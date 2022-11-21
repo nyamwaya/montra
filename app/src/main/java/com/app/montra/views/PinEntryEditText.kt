@@ -94,12 +94,12 @@ class PinEntryEditText : AppCompatEditText {
         textPaint?.density = multi
         textPaint?.style = Paint.Style.FILL
         textPaint?.textSize = textSize
-        textPaint?.color = ContextCompat.getColor(context, R.color.violet_100)
+        textPaint?.color = ContextCompat.getColor(context, R.color.violet_20)
         textEmptyPaint = TextPaint(Paint.ANTI_ALIAS_FLAG)
         textEmptyPaint?.style = Paint.Style.STROKE
         textEmptyPaint?.textSize = textSize
         textEmptyPaint?.strokeWidth = 2F
-        textEmptyPaint?.color = ContextCompat.getColor(context, R.color.violet_100)
+        textEmptyPaint?.color = ContextCompat.getColor(context, R.color.black)
         mLinesPaint = Paint(paint)
         mLinesPaint?.strokeWidth = mLineStroke
         if (!isInEditMode) {
