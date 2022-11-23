@@ -1,6 +1,6 @@
 package com.app.montra.data.repository
 
-import com.app.montra.data.StytchApi
+import com.app.montra.data.remote.StytchApi
 import com.app.montra.data.remote.dto.CreateUserWithPasswordRequest
 import com.app.montra.data.remote.dto.CreateUserWithPasswordResponse
 import com.app.montra.domain.repository.StytchRepository

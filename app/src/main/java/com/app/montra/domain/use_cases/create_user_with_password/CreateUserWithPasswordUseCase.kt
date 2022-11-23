@@ -19,7 +19,7 @@ class CreateUserWithPasswordUseCase @Inject constructor(
             val createUserWithPasswordResponse = repository.createUserWithPassword(requestBody)
             emit(Resource.Success(createUserWithPasswordResponse))
         } catch (e: HttpException) {
-            emit(Resource.Error(e.localizedMessage ?: "An unexpected error occured."))
+            emit(Resource.Error(e.localizedMessage ?: "An unexpected error occurred"))
         } catch (e: IOException) {
             emit(Resource.Error("Couldn't reach server, check your internet connection."))
         }
