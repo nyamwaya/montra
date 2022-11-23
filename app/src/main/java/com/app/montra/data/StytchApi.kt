@@ -8,6 +8,6 @@ import retrofit2.http.POST
 interface StytchApi {
     @POST("/passwords")
     suspend fun createUserWithPassword(
-        @Body createUserWithPasswordRequest: CreateUserWithPasswordRequest
+        @Body requestBody: String
     ) : CreateUserWithPasswordResponse
 }
