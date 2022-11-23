@@ -13,7 +13,7 @@ import javax.inject.Inject
 class CreateUserWithPasswordUseCase @Inject constructor(
     private val repository: StytchRepository
 ) {
-    operator fun invoke(requestBody: String): Flow<Resource<CreateUserWithPasswordResponse>> = flow {
+    operator fun invoke(requestBody: CreateUserWithPasswordRequest): Flow<Resource<CreateUserWithPasswordResponse>> = flow {
         try {
             emit(Resource.Loading())
             val createUserWithPasswordResponse = repository.createUserWithPassword(requestBody)

@@ -3,6 +3,7 @@ package com.app.montra.presentation.onboarding
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.app.montra.common.Resource
+import com.app.montra.data.remote.dto.CreateUserWithPasswordRequest
 import com.app.montra.data.remote.dto.CreateUserWithPasswordResponse
 import com.app.montra.domain.use_cases.create_user_with_password.CreateUserWithPasswordUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -18,7 +19,7 @@ class OnboardingViewModel @Inject constructor(
     private val _createUserState = MutableStateFlow<Resource<CreateUserWithPasswordResponse>>(Resource.Loading(null))
     val createUserState: StateFlow<Resource<CreateUserWithPasswordResponse>> = _createUserState
 
-    fun createUserWithPassword(requestBody: String) {
+    fun createUserWithPassword(requestBody: CreateUserWithPasswordRequest) {
         viewModelScope.launch {
             createUserWithPasswordUseCase(requestBody).collect { result ->
                 _createUserState.value = result

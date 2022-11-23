@@ -1,12 +1,13 @@
 package com.app.montra.data.remote
 
+import com.app.montra.data.remote.dto.CreateUserWithPasswordRequest
 import com.app.montra.data.remote.dto.CreateUserWithPasswordResponse
 import retrofit2.http.Body
 import retrofit2.http.POST
 
 interface StytchApi {
-    @POST("/passwords")
+    @POST("passwords")
     suspend fun createUserWithPassword(
-        @Body requestBody: String
+        @Body requestBody: CreateUserWithPasswordRequest
     ): CreateUserWithPasswordResponse
 }

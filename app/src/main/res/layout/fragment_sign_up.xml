@@ -31,6 +31,7 @@
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/name_text_input"
             style="@style/EditTextStyle"
+            android:text="aleckson nyamwaya"
             android:layout_height="wrap_content" />
 
     </com.google.android.material.textfield.TextInputLayout>
@@ -51,6 +52,7 @@
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/email_text_input"
             style="@style/EditTextStyle"
+            android:text="alecksonnyamwaya@gmail.com"
             android:layout_height="wrap_content" />
 
     </com.google.android.material.textfield.TextInputLayout>
@@ -71,6 +73,7 @@
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/password_text_input"
             style="@style/EditTextStyle"
+            android:text="Poopman23@"
             android:layout_height="wrap_content" />
     </com.google.android.material.textfield.TextInputLayout>
 

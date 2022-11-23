@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.content.res.AppCompatResources
+import androidx.core.content.ContextCompat
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.findNavController
@@ -45,14 +46,6 @@ class SignUpFragment : BaseFragment() {
                 when (result) {
                     is Resource.Loading -> {
                         Log.e(SignUpFragment::class.simpleName, "creating user")
-                        binding.btnSignup.btnGenericLarge.isClickable = false
-                        binding.btnSignup.btnGenericLarge.background =
-                            AppCompatResources.getDrawable(
-                                requireActivity(),
-                                R.drawable.btn_large_unactive
-                            )
-                        binding.btnSignup.btnGenericLarge.text = "Loading.."
-                        binding.btnSignup.progressbar.visibility = View.VISIBLE
                     }
                     is Resource.Success -> {
                         Log.e(
@@ -65,8 +58,14 @@ class SignUpFragment : BaseFragment() {
                                 requireActivity(),
                                 R.drawable.btn_large_purple
                             )
+                        binding.btnSignup.btnGenericLarge.setBackgroundColor(
+                            ContextCompat.getColor(
+                                requireActivity(),
+                                R.color.violet_100
+                            )
+                        )
                         binding.btnSignup.progressbar.visibility = View.GONE
-                        binding.toolbar.screenLabel.setText(R.string.signup)
+                        binding.btnSignup.btnGenericLarge.setText(R.string.signup)
 
                         val action =
                             SignUpFragmentDirections.actionSignupFragmentToVerificationFragment()
@@ -81,10 +80,16 @@ class SignUpFragment : BaseFragment() {
                         binding.btnSignup.btnGenericLarge.background =
                             AppCompatResources.getDrawable(
                                 requireActivity(),
-                                R.drawable.btn_large_purple
+                                R.drawable.btn_large_violet
                             )
+//                        binding.btnSignup.btnGenericLarge.setBackgroundColor(
+//                            ContextCompat.getColor(
+//                                requireActivity(),
+//                                R.color.violet_100
+//                            )
+//                        )
                         binding.btnSignup.progressbar.visibility = View.GONE
-                        binding.toolbar.screenLabel.setText(R.string.signup)
+                        binding.btnSignup.btnGenericLarge.setText(R.string.signup)
 
                         Snackbar.make(
                             binding.root,
@@ -101,14 +106,27 @@ class SignUpFragment : BaseFragment() {
         binding.toolbar.backBtn.setOnClickListener {}
 
         binding.btnSignup.btnGenericLarge.setOnClickListener {
-            viewModel.createUserWithPassword(
-                requestBodyToJson(
-                    CreateUserWithPasswordRequest(
-                        email = binding.emailTextInput.text.toString(),
-                        password = binding.emailTextInput.text.toString()
-                    )
+            //set loading spinner and text on button
+            binding.btnSignup.btnGenericLarge.isClickable = false
+            binding.btnSignup.btnGenericLarge.background =
+                AppCompatResources.getDrawable(
+                    requireActivity(),
+                    R.drawable.btn_large_unactive
+                )
+            binding.btnSignup.btnGenericLarge.setBackgroundColor(
+                ContextCompat.getColor(
+                    requireActivity(),
+                    R.color.light_60
                 )
             )
+            binding.btnSignup.btnGenericLarge.text = "Loading.."
+            binding.btnSignup.progressbar.visibility = View.VISIBLE
+            val requestBody = CreateUserWithPasswordRequest(
+                email = binding.emailTextInput.text.toString(),
+                password = binding.passwordTextInput.text.toString()
+            )
+            Log.e(SignUpFragment::class.simpleName + "request body", requestBodyToJson(requestBody))
+            viewModel.createUserWithPassword(requestBody)
         }
     }
 
