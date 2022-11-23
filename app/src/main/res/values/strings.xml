@@ -7,6 +7,12 @@
     <string name="lets_go">Let\'s go</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
+    <!--stytch api-->
+    <string name="test_test_stytch_endpoint">https://test.stytch.com/v1/passwords</string>
+    <string name="test_stytch_project_id">project-test-8b6f9f80-0c3c-4120-b0bc-7a67a28c1945</string>
+    <string name="test_stytch_secret_id">secret-test-pVXGw0HHCFiwJeAXykwVQPCQd8wNFcjTkUU=</string>
+    <string name="test_stytch_public_token">public-token-test-2d0069a9-5308-4291-98fd-16dc103f1d96</string>
+
     <!--On-boarding-->
     <string name="onboarding_fragment_label">Onboardign Fragment</string>
     <string name="onboard_screen_one_heading">Gain total control \n of your money</string>
@@ -21,12 +27,6 @@
     <string name="signup">Sign Up</string>
     <string name="with_google">Sign Up with Google</string>
     <string name="login">Login</string>
-
-    <!--auth0 keys -->
-    <string name="auth0_domain">dev-wxjer4ti6y8hhyqj.us.auth0.com</string>
-    <string name="auth0_client_id">z7NYdfwuXtRyY7r8jAx1S4kpRJLNqoeL</string>
-    <string name="auth0_api_key">https://dev-wxjer4ti6y8hhyqj.us.auth0.com/api/v2/</string>
-
 
     <!--Login Strings-->
     <string name="login_fragment_label">Login Fragment</string>
