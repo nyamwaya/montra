@@ -16,7 +16,7 @@ import javax.inject.Singleton
 
 @Module
 @InstallIn(SingletonComponent::class)
-class AppModule {
+object AppModule {
 
     private val client = OkHttpClient.Builder()
         .addInterceptor(BasicAuthInterceptor(Constants.USERNAME, Constants.PASSWORD))
