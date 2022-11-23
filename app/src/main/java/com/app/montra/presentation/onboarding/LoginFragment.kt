@@ -1,6 +1,5 @@
-package com.app.montra.onboarding
+package com.app.montra.presentation.onboarding
 
-import android.os.Binder
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -38,7 +37,8 @@ class LoginFragment : Fragment() {
             //TODO: navigate back
         }
         binding.forgotPassword.setOnClickListener {
-            val action = LoginFragmentDirections.actionLoginFragmentToForgotPasswordFragment()
+            val action =
+                com.app.montra.onboarding.LoginFragmentDirections.actionLoginFragmentToForgotPasswordFragment()
             requireActivity().findNavController(R.id.nav_host_fragment)
                 .navigate(action)
         }

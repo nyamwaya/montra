@@ -1,4 +1,4 @@
-package com.app.montra.onboarding
+package com.app.montra.presentation.onboarding
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -43,12 +43,14 @@ class OnBoardingFragment : Fragment() {
 
     private fun onClick() {
         binding.btnOnboardingSignup.btnGenericLarge.setOnClickListener {
-            val action = OnBoardingFragmentDirections.actionOnboardingFragmentToSignupFragment()
+            val action =
+                com.app.montra.onboarding.OnBoardingFragmentDirections.actionOnboardingFragmentToSignupFragment()
             requireActivity().findNavController(R.id.nav_host_fragment).navigate(action)
         }
 
         binding.login.setOnClickListener {
-            val action = OnBoardingFragmentDirections.actionOnboardingFragmentToLoginFragment()
+            val action =
+                com.app.montra.onboarding.OnBoardingFragmentDirections.actionOnboardingFragmentToLoginFragment()
             requireActivity().findNavController(R.id.nav_host_fragment)
                 .navigate(action)
         }

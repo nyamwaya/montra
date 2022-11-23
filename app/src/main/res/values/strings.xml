@@ -22,6 +22,12 @@
     <string name="with_google">Sign Up with Google</string>
     <string name="login">Login</string>
 
+    <!--auth0 keys -->
+    <string name="auth0_domain">dev-wxjer4ti6y8hhyqj.us.auth0.com</string>
+    <string name="auth0_client_id">z7NYdfwuXtRyY7r8jAx1S4kpRJLNqoeL</string>
+    <string name="auth0_api_key">https://dev-wxjer4ti6y8hhyqj.us.auth0.com/api/v2/</string>
+
+
     <!--Login Strings-->
     <string name="login_fragment_label">Login Fragment</string>
 

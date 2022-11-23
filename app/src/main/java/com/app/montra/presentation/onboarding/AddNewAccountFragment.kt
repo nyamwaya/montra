@@ -1,4 +1,4 @@
-package com.app.montra.onboarding
+package com.app.montra.presentation.onboarding
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -29,7 +29,6 @@ class AddNewAccountFragment : BaseFragment() {
 
     override fun setUpViews() {
         setUpBottomSheet()
-
 
         binding.toolbar.screenLabel.let {
             it.setText(R.string.add_account)

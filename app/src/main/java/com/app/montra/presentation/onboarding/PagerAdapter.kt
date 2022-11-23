@@ -1,11 +1,11 @@
-package com.app.montra.onboarding
+package com.app.montra.presentation.onboarding
 
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.viewpager.widget.PagerAdapter
-import com.app.montra.onboarding.data.ModelObject
+import com.app.montra.data.ModelObject
 
 
 class CustomPagerAdapter(context: Context) : PagerAdapter() {

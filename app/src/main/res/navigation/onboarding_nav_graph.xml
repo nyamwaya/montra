@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/onboarding_fragment"
-        android:name="com.app.montra.onboarding.OnBoardingFragment"
+        android:name="com.app.montra.presentation.onboarding.OnBoardingFragment"
         android:label="@string/onboarding_fragment_label"
         tools:layout="@layout/fragment_onboarding" >
         <action
@@ -20,7 +20,7 @@
 
     <fragment
         android:id="@+id/signup_fragment"
-        android:name="com.app.montra.onboarding.SignUpFragment"
+        android:name="com.app.montra.presentation.onboarding.SignUpFragment"
         android:label="@string/signup_fragment_label"
         tools:layout="@layout/fragment_sign_up" >
         <action
@@ -30,7 +30,7 @@
 
     <fragment
         android:id="@+id/login_fragment"
-        android:name="com.app.montra.onboarding.LoginFragment"
+        android:name="com.app.montra.presentation.onboarding.LoginFragment"
         android:label="@string/login_fragment_label"
         tools:layout="@layout/fragment_login" >
         <action
@@ -43,7 +43,7 @@
 
     <fragment
         android:id="@+id/forgot_password_fragment"
-        android:name="com.app.montra.onboarding.ForgotPasswordFragment"
+        android:name="com.app.montra.presentation.onboarding.ForgotPasswordFragment"
         android:label="@string/forgot_password_fragment_label"
         tools:layout="@layout/fragment_forgot_password" >
         <action
@@ -53,7 +53,7 @@
 
     <fragment
         android:id="@+id/email_sent_fragment"
-        android:name="com.app.montra.onboarding.EmailSentFragment"
+        android:name="com.app.montra.presentation.onboarding.EmailSentFragment"
         android:label="@string/email_sent_fragment_label"
         tools:layout="@layout/fragment_email_sent" >
         <action
@@ -63,7 +63,7 @@
 
     <fragment
         android:id="@+id/verification_fragment"
-        android:name="com.app.montra.onboarding.VerificationFragment"
+        android:name="com.app.montra.presentation.onboarding.VerificationFragment"
         android:label="@string/fragment_verification_label"
         tools:layout="@layout/fragment_verification" >
 
@@ -74,7 +74,7 @@
 
     <fragment
         android:id="@+id/user_pin_fragment"
-        android:name="com.app.montra.onboarding.PinEntryFragment"
+        android:name="com.app.montra.presentation.onboarding.PinEntryFragment"
         android:label="@string/fragment_pin_entry_label"
         tools:layout="@layout/fragment_pin_entry" >
         <action
@@ -84,7 +84,7 @@
 
     <fragment
         android:id="@+id/account_setup_fragment"
-        android:name="com.app.montra.onboarding.SetUpAccountFragment"
+        android:name="com.app.montra.presentation.onboarding.SetUpAccountFragment"
         android:label="@string/fragment_setup_label"
         tools:layout="@layout/fragment_set_up_account" >
         <action
@@ -94,7 +94,7 @@
 
     <fragment
         android:id="@+id/add_new_account_fragment"
-        android:name="com.app.montra.onboarding.AddNewAccountFragment"
+        android:name="com.app.montra.presentation.onboarding.AddNewAccountFragment"
         android:label="@string/fragment_add_account_label"
         tools:layout="@layout/fragment_add_new_account" >
         <action
@@ -104,14 +104,14 @@
 
     <fragment
         android:id="@+id/setup_success_fragment"
-        android:name="com.app.montra.onboarding.SetupFinishedFragment"
+        android:name="com.app.montra.presentation.onboarding.SetupFinishedFragment"
         android:label="@string/fragment_setup_success_label"
         tools:layout="@layout/fragment_setup_finished" >
     </fragment>
 
     <fragment
         android:id="@+id/reset_password_fragment"
-        android:name="com.app.montra.onboarding.ResetPasswordFragment"
+        android:name="com.app.montra.presentation.onboarding.ResetPasswordFragment"
         android:label="@string/fragment_reset_password_label"
         tools:layout="@layout/fragment_reset_password" >
     </fragment>

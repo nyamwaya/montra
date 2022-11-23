@@ -1,4 +1,4 @@
-package com.app.montra.onboarding
+package com.app.montra.presentation.onboarding
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -33,7 +33,8 @@ class ForgotPasswordFragment : BaseFragment() {
         }
 
         binding.btnContinue.btnGenericLarge.setOnClickListener {
-            val action = ForgotPasswordFragmentDirections.actionForgotPasswordFragmentToEmailSentFragment()
+            val action =
+                com.app.montra.onboarding.ForgotPasswordFragmentDirections.actionForgotPasswordFragmentToEmailSentFragment()
             requireActivity().findNavController(R.id.nav_host_fragment).navigate(action)
         }
     }

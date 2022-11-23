@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".onboarding.VerificationFragment">
+    tools:context=".presentation.onboarding.VerificationFragment">
 
     <include
         android:id="@+id/toolbar"
@@ -30,7 +30,7 @@
 
 
 
-    <com.app.montra.views.PinEntryEditText
+    <com.app.montra.presentation.PinEntryEditText
         android:id="@+id/pin_entry_edit"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

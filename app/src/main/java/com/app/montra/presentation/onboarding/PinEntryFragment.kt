@@ -1,4 +1,4 @@
-package com.app.montra.onboarding
+package com.app.montra.presentation.onboarding
 
 import android.os.Bundle
 import android.view.LayoutInflater
