@@ -30,7 +30,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <include
-        android:id="@+id/btn_onboarding_signup"
+        android:id="@+id/btnOnboardingSignup"
         layout="@layout/btn_large_purple"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -57,6 +57,6 @@
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btn_onboarding_signup" />
+        app:layout_constraintTop_toBottomOf="@id/btn_signup" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

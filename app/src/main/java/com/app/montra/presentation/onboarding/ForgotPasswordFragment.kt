@@ -33,8 +33,7 @@ class ForgotPasswordFragment : BaseFragment() {
         }
 
         binding.btnContinue.btnGenericLarge.setOnClickListener {
-            val action =
-                com.app.montra.onboarding.ForgotPasswordFragmentDirections.actionForgotPasswordFragmentToEmailSentFragment()
+            val action = ForgotPasswordFragmentDirections.actionForgotPasswordFragmentToEmailSentFragment()
             requireActivity().findNavController(R.id.nav_host_fragment).navigate(action)
         }
     }

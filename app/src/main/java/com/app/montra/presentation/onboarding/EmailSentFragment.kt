@@ -33,8 +33,7 @@ class EmailSentFragment : BaseFragment() {
 
     override fun onClick() {
         binding.btnBackToEmail.btnGenericLarge.setOnClickListener {
-            val action =
-                com.app.montra.onboarding.EmailSentFragmentDirections.actionEmailSentFragmentToLoginFragment()
+            val action = EmailSentFragmentDirections.actionEmailSentFragmentToLoginFragment()
             requireActivity().findNavController(R.id.nav_host_fragment).navigate(action)
         }
     }

@@ -43,14 +43,12 @@ class OnBoardingFragment : Fragment() {
 
     private fun onClick() {
         binding.btnOnboardingSignup.btnGenericLarge.setOnClickListener {
-            val action =
-                com.app.montra.onboarding.OnBoardingFragmentDirections.actionOnboardingFragmentToSignupFragment()
+            val action = OnBoardingFragmentDirections.actionOnboardingFragmentToSignupFragment()
             requireActivity().findNavController(R.id.nav_host_fragment).navigate(action)
         }
 
         binding.login.setOnClickListener {
-            val action =
-                com.app.montra.onboarding.OnBoardingFragmentDirections.actionOnboardingFragmentToLoginFragment()
+            val action = OnBoardingFragmentDirections.actionOnboardingFragmentToLoginFragment()
             requireActivity().findNavController(R.id.nav_host_fragment)
                 .navigate(action)
         }

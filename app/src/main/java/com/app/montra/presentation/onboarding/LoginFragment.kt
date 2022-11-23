@@ -37,8 +37,7 @@ class LoginFragment : Fragment() {
             //TODO: navigate back
         }
         binding.forgotPassword.setOnClickListener {
-            val action =
-                com.app.montra.onboarding.LoginFragmentDirections.actionLoginFragmentToForgotPasswordFragment()
+            val action = LoginFragmentDirections.actionLoginFragmentToForgotPasswordFragment()
             requireActivity().findNavController(R.id.nav_host_fragment)
                 .navigate(action)
         }
