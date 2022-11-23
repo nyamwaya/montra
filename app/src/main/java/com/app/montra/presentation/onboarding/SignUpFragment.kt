@@ -15,9 +15,10 @@ import com.app.montra.data.remote.dto.CreateUserWithPasswordRequest
 import com.app.montra.databinding.FragmentSignUpBinding
 import com.app.montra.util.requestBodyToJson
 import com.google.android.material.snackbar.Snackbar
+import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
 
-
+@AndroidEntryPoint
 class SignUpFragment : BaseFragment() {
 
     private lateinit var _binding: FragmentSignUpBinding

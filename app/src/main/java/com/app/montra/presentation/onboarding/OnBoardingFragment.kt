@@ -8,7 +8,7 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
 import com.app.montra.R
 import com.app.montra.databinding.FragmentOnboardingBinding
-
+import dagger.hilt.android.AndroidEntryPoint
 
 class OnBoardingFragment : Fragment() {
 
