@@ -4,3 +4,5 @@ data class CreateUserWithPasswordRequest(
     val email: String,
     val password: String
 )
+
+

@@ -10,12 +10,8 @@ import javax.inject.Inject
 class StytchRepositoryImpl @Inject constructor(
     private val api: StytchApi
 ) : StytchRepository {
-    override suspend fun createUserWithPassword(requestBody: CreateUserWithPasswordRequest): CreateUserWithPasswordResponse {
-        /**
-         * Move serialization into
-         * @param CreateUserWithPasswordRequest class
-         * */
-       return api.createUserWithPassword(Gson().toJson(requestBody))
+    override suspend fun createUserWithPassword(requestBody: String): CreateUserWithPasswordResponse {
+       return api.createUserWithPassword(requestBody)
     }
 
 }
