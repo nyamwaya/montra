@@ -5,7 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.viewpager.widget.PagerAdapter
-import com.app.montra.data.ModelObject
+import com.app.montra.util.ModelObject
 
 
 class CustomPagerAdapter(context: Context) : PagerAdapter() {
