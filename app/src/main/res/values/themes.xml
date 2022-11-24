@@ -48,4 +48,60 @@
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
     </style>
+
+    <!--text-->
+    <style name="TitleX">
+        <item name="fontFamily">@font/inter_bold_700</item>
+        <item name="android:textColor">@color/dark_75</item>
+        <item name="android:textSize">@dimen/textSize64</item>
+    </style>
+
+    <style name="Title1">
+        <item name="fontFamily">@font/inter_bold_700</item>
+        <item name="android:textColor">@color/dark_75</item>
+        <item name="android:textSize">@dimen/textSize32</item>
+    </style>
+
+    <style name="Title2">
+        <item name="fontFamily">@font/inter_600_semibold</item>
+        <item name="android:textColor">@color/dark_75</item>
+        <item name="android:textSize">@dimen/textSize24</item>
+    </style>
+
+    <style name="Title3">
+        <item name="fontFamily">@font/inter_600_semibold</item>
+        <item name="android:textColor">@color/dark_75</item>
+        <item name="android:textSize">@dimen/textSize18</item>
+    </style>
+
+    <style name="Regular1">
+        <item name="fontFamily">@font/inter_500_medium</item>
+        <item name="android:textColor">@color/dark_75</item>
+        <item name="android:textSize">@dimen/textSize16</item>
+    </style>
+
+    <style name="Regular2">
+        <item name="fontFamily">@font/inter_600_semibold</item>
+        <item name="android:textColor">@color/dark_75</item>
+        <item name="android:textSize">@dimen/textSize16</item>
+    </style>
+
+    <style name="Regular3">
+        <item name="fontFamily">@font/inter_500_medium</item>
+        <item name="android:textColor">@color/dark_75</item>
+        <item name="android:textSize">@dimen/textSize14</item>
+    </style>
+
+    <style name="Small">
+        <item name="fontFamily">@font/inter_500_medium</item>
+        <item name="android:textColor">@color/dark_75</item>
+        <item name="android:textSize">@dimen/textSize13</item>
+    </style>
+
+    <style name="Tiny">
+        <item name="fontFamily">@font/inter_500_medium</item>
+        <item name="android:textColor">@color/dark_75</item>
+        <item name="android:textSize">@dimen/textSize12</item>
+    </style>
+
 </resources>

@@ -93,7 +93,7 @@
         android:id="@+id/terms_and_conditions_checkbox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:buttonTint="@color/purple_100"
+        android:buttonTint="@color/violet_100"
         android:layout_marginStart="@dimen/margin16"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/password" />
@@ -125,7 +125,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/or_with"
-        android:fontFamily="@font/inter_bold"
+        android:fontFamily="@font/inter_bold_700"
         android:textSize="14sp"
         android:textColor="@color/light_20"
         android:layout_marginTop="@dimen/margin12"
