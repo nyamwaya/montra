@@ -32,12 +32,10 @@ class OnboardingViewModel @Inject constructor(
         viewModelScope.launch {
             createUserWithPasswordUseCase(createUserRequest).collect { result ->
                 _createUserState.value = result
-                viewModelScope.launch {
-                    if (result.data != null)
-                        updateUserUseCase(result.data.user_id, updateUserRequest).collect {
-                            _updateUserState.value = it
-                        }
-                }
+                if (result.data != null)
+                    updateUserUseCase(result.data.user_id, updateUserRequest).collect {
+                        _updateUserState.value = it
+                    }
             }
         }
     }
