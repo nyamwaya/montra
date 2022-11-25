@@ -8,7 +8,7 @@ import com.app.montra.data.remote.dto.CreateUserWithPasswordResponse
 import com.app.montra.data.remote.dto.UpdateUserRequest
 import com.app.montra.data.remote.dto.UpdateUserResponse
 import com.app.montra.domain.use_cases.create_user_with_password.CreateUserWithPasswordUseCase
-import com.app.montra.domain.use_cases.create_user_with_password.UpdateUserUseCase
+import com.app.montra.domain.use_cases.update_user.UpdateUserUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow

@@ -1,4 +1,4 @@
-package com.app.montra.domain.use_cases.create_user_with_password
+package com.app.montra.domain.use_cases.update_user
 
 import com.app.montra.common.Resource
 import com.app.montra.data.remote.dto.UpdateUserRequest
