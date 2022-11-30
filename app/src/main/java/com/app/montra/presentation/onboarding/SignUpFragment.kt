@@ -7,21 +7,18 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.content.res.AppCompatResources
 import androidx.core.content.ContextCompat
-import androidx.fragment.app.viewModels
+import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.lifecycleScope
-import androidx.navigation.findNavController
+import androidx.navigation.fragment.findNavController
 import com.app.montra.R
 import com.app.montra.common.Resource
-import com.app.montra.data.remote.dto.CreateUserWithPasswordRequest
-import com.app.montra.data.remote.dto.Name
-import com.app.montra.data.remote.dto.UpdateUserRequest
-import com.app.montra.data.remote.dto.User
+import com.app.montra.data.remote.dto.*
 import com.app.montra.databinding.FragmentSignUpBinding
+import com.app.montra.domain.models.UserModel
 import com.app.montra.presentation.onboarding.viewmodels.OnboardingViewModel
 import com.app.montra.util.showSnackBar
 import com.google.android.material.snackbar.Snackbar
 import dagger.hilt.android.AndroidEntryPoint
-import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
 
@@ -31,7 +28,9 @@ class SignUpFragment : BaseFragment() {
     private lateinit var _binding: FragmentSignUpBinding
     private val binding get() = _binding
 
-    private val viewModel by viewModels<OnboardingViewModel>()
+    private val viewModel by activityViewModels<OnboardingViewModel>()
+    private lateinit var userModel: UserModel
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -56,6 +55,16 @@ class SignUpFragment : BaseFragment() {
                 }
                 is Resource.Success -> {
                     Log.e(SignUpFragment::class.simpleName, "user created")
+                    viewModel.updateUser(
+                        result.data!!.user_id,
+                        UpdateUserRequest(
+                            name = Name(
+                                first_name = "Alex",
+                                last_name = "nyamwaya",
+                                middle_name = "nyamwaya"
+                            )
+                        )
+                    )
                     hideLoadingSpinner()
                     activateSignUpButton()
                 }
@@ -75,12 +84,14 @@ class SignUpFragment : BaseFragment() {
                     Log.e(SignUpFragment::class.simpleName, "updating user")
                 }
                 is Resource.Success -> {
+                    userModel = result.data!!.toUserModel()
                     Log.e(SignUpFragment::class.simpleName, "updated user")
                     navigateToOtpScreen()
                 }
 
                 is Resource.Error -> {
                     Log.e(SignUpFragment::class.simpleName, "error updating user")
+                    showSnackBar(result.message.toString(), binding.root, Snackbar.LENGTH_LONG)
                 }
             }
         }.launchIn(lifecycleScope)
@@ -92,17 +103,10 @@ class SignUpFragment : BaseFragment() {
         binding.btnSignup.btnGenericLarge.setOnClickListener {
             deactivateSignUpButton()
             viewModel.createUser(
-                CreateUserWithPasswordRequest(
+                LoginRequest(
                     email = binding.emailTextInput.text.toString(),
                     password = binding.passwordTextInput.text.toString()
                 ),
-                UpdateUserRequest(
-                    name = Name(
-                        first_name = "Alex",
-                        last_name = "nyamwaya",
-                        middle_name = "nyamwaya"
-                    )
-                )
             )
         }
     }
@@ -141,8 +145,9 @@ class SignUpFragment : BaseFragment() {
 
     }
 
-    private fun navigateToOtpScreen(){
-        val action = SignUpFragmentDirections.actionSignupFragmentToVerificationFragment()
-        requireActivity().findNavController(R.id.nav_host_fragment).navigate(action)
+    private fun navigateToOtpScreen() {
+        val action = SignUpFragmentDirections.actionSignupFragmentToVerificationFragment(userModel)
+        findNavController().navigate(action)
+
     }
 }

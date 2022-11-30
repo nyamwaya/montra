@@ -87,12 +87,12 @@
         android:textColor="@color/violet_100"
         android:textSize="@dimen/textSize16"
         android:layout_marginBottom="@dimen/margin46"
-        app:layout_constraintBottom_toTopOf="@+id/btn_verify"
+        app:layout_constraintBottom_toTopOf="@+id/btn_authenticate_otp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
 
     <include
-        android:id="@+id/btn_verify"
+        android:id="@+id/btn_authenticate_otp"
         android:layout_marginHorizontal="@dimen/textSize16"
         layout="@layout/btn_large_purple"
         android:layout_width="match_parent"

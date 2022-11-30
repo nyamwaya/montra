@@ -23,9 +23,12 @@
         android:name="com.app.montra.presentation.onboarding.SignUpFragment"
         android:label="@string/signup_fragment_label"
         tools:layout="@layout/fragment_sign_up" >
+
         <action
             android:id="@+id/action_signup_fragment_to_verification_fragment"
-            app:destination="@id/verification_fragment" />
+            app:destination="@id/verification_fragment" >
+
+        </action>
     </fragment>
 
     <fragment
@@ -68,8 +71,11 @@
         tools:layout="@layout/fragment_verification" >
 
         <action
-            android:id="@+id/action_verification_fragment_to_user_pin_fragment2"
+            android:id="@+id/action_verification_fragment_to_user_pin_fragment"
             app:destination="@id/user_pin_fragment" />
+        <argument
+            android:name="userModel"
+            app:argType="com.app.montra.domain.models.UserModel" />
     </fragment>
 
     <fragment

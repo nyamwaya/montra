@@ -1,7 +1,7 @@
-package com.app.montra.domain.use_cases.create_user_with_password
+package com.app.montra.domain.use_cases.signup
 
 import com.app.montra.common.Resource
-import com.app.montra.data.remote.dto.CreateUserWithPasswordRequest
+import com.app.montra.data.remote.dto.LoginRequest
 import com.app.montra.data.remote.dto.CreateUserWithPasswordResponse
 import com.app.montra.domain.repository.StytchRepository
 import kotlinx.coroutines.flow.Flow
@@ -10,10 +10,10 @@ import retrofit2.HttpException
 import java.io.IOException
 import javax.inject.Inject
 
-class CreateUserWithPasswordUseCase @Inject constructor(
+class SignUpUseCase @Inject constructor(
     private val repository: StytchRepository
 ) {
-    operator fun invoke(requestBody: CreateUserWithPasswordRequest): Flow<Resource<CreateUserWithPasswordResponse>> = flow {
+    operator fun invoke(requestBody: LoginRequest): Flow<Resource<CreateUserWithPasswordResponse>> = flow {
         try {
             emit(Resource.Loading())
             val createUserWithPasswordResponse = repository.createUserWithPassword(requestBody)
