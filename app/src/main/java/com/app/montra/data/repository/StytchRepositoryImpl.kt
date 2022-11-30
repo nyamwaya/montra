@@ -9,7 +9,7 @@ class StytchRepositoryImpl @Inject constructor(
     private val api: StytchApi
 ) : StytchRepository {
 
-    override suspend fun createUserWithPassword(requestBody: LoginRequest): CreateUserWithPasswordResponse {
+    override suspend fun createUserWithPassword(requestBody: AuthRequest): CreateUserWithPasswordResponseDto {
         return api.signUp(requestBody)
     }
 
@@ -20,20 +20,24 @@ class StytchRepositoryImpl @Inject constructor(
         return api.updateUser(userId, requestBody)
     }
 
-    override suspend fun sendOtp(requestBody: SendOtpRequest): SendOtpResponse {
+    override suspend fun sendOtp(requestBody: EmailOnlyRequest): SendOtpResponseDto {
         return api.sendOtp(requestBody)
     }
 
-    override suspend fun authenticateOtp(requestBody: AuthenticateOtpRequest): AuthenticateOtpResponse {
+    override suspend fun authenticateOtp(requestBody: AuthenticateOtpRequest): AuthenticateOtpResponseDto {
         return api.authenticateOtp(requestBody)
     }
 
-    override suspend fun login(requestBody: LoginRequest): LoginResponse {
+    override suspend fun login(requestBody: AuthRequest): LoginResponseDto {
         return api.login(requestBody)
     }
 
-    override suspend fun getUser(userId: String): GetUserResponse {
+    override suspend fun getUser(userId: String): GetUserResponseDto {
        return api.getUser(userId)
+    }
+
+    override suspend fun resetPassword(requestBOdy: EmailOnlyRequest): ResetPasswordResponseDto {
+        return api.resetPassword(requestBOdy)
     }
 
 }

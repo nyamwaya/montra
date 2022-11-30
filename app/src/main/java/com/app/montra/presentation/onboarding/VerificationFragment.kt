@@ -12,9 +12,9 @@ import androidx.navigation.fragment.navArgs
 import com.app.montra.R
 import com.app.montra.common.Resource
 import com.app.montra.data.remote.dto.AuthenticateOtpRequest
-import com.app.montra.data.remote.dto.SendOtpRequest
+import com.app.montra.data.remote.dto.EmailOnlyRequest
 import com.app.montra.databinding.FragmentVerificationBinding
-import com.app.montra.presentation.onboarding.viewmodels.OnboardingViewModel
+import com.app.montra.presentation.onboarding.viewmodels.SignUpViewModel
 import com.app.montra.util.showSnackBar
 import com.google.android.material.snackbar.Snackbar
 import kotlinx.coroutines.flow.launchIn
@@ -25,7 +25,7 @@ class VerificationFragment : BaseFragment() {
     private var _binding: FragmentVerificationBinding? = null
     private val binding get() = _binding!!
 
-    private val viewModel by activityViewModels<OnboardingViewModel>()
+    private val viewModel by activityViewModels<SignUpViewModel>()
     val args: VerificationFragmentArgs by navArgs()
 
     override fun onCreateView(
@@ -40,7 +40,7 @@ class VerificationFragment : BaseFragment() {
         super.onViewCreated(view, savedInstanceState)
         observables()
         viewModel.sendOtp(
-            SendOtpRequest(
+            EmailOnlyRequest(
                 email = args.userModel.emails[0].email
             )
         )
@@ -59,7 +59,7 @@ class VerificationFragment : BaseFragment() {
 
         binding.resendCode.setOnClickListener {
             viewModel.sendOtp(
-                SendOtpRequest(
+                EmailOnlyRequest(
                     email = args.userModel.emails[0].email
                 )
             )

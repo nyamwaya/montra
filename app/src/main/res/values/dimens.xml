@@ -51,4 +51,7 @@
     <dimen name="width_large">128dp</dimen>
 
 
+    <dimen name="button_large_height">56dp</dimen>
+
+
 </resources>

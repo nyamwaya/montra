@@ -10,7 +10,8 @@ object Constants {
 
     //Shared Prefs
     const val SHARED_PREFS_NAME = "montra_prefs"
-    const val PREFS_USER_ID = "stytch_user_id"
+    const val PREFS_USER_ID = "user_id"
+    const val HAS_SEEN_ONBOARDING = "has_seen_onboarding"
 
 
 }

@@ -15,7 +15,7 @@ import com.app.montra.common.Resource
 import com.app.montra.data.remote.dto.*
 import com.app.montra.databinding.FragmentSignUpBinding
 import com.app.montra.domain.models.UserModel
-import com.app.montra.presentation.onboarding.viewmodels.OnboardingViewModel
+import com.app.montra.presentation.onboarding.viewmodels.SignUpViewModel
 import com.app.montra.util.showSnackBar
 import com.google.android.material.snackbar.Snackbar
 import dagger.hilt.android.AndroidEntryPoint
@@ -28,7 +28,7 @@ class SignUpFragment : BaseFragment() {
     private lateinit var _binding: FragmentSignUpBinding
     private val binding get() = _binding
 
-    private val viewModel by activityViewModels<OnboardingViewModel>()
+    private val viewModel by activityViewModels<SignUpViewModel>()
     private lateinit var userModel: UserModel
 
 
@@ -102,8 +102,8 @@ class SignUpFragment : BaseFragment() {
 
         binding.btnSignup.btnGenericLarge.setOnClickListener {
             deactivateSignUpButton()
-            viewModel.createUser(
-                LoginRequest(
+            viewModel.signUpUser(
+                AuthRequest(
                     email = binding.emailTextInput.text.toString(),
                     password = binding.passwordTextInput.text.toString()
                 ),

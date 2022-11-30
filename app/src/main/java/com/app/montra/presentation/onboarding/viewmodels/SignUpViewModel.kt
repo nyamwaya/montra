@@ -16,32 +16,32 @@ import kotlinx.coroutines.flow.onEach
 import javax.inject.Inject
 
 @HiltViewModel
-class OnboardingViewModel @Inject constructor(
+class SignUpViewModel @Inject constructor(
     private val signUpUseCase: SignUpUseCase,
     private val updateUserUseCase: UpdateUserUseCase,
     private val sendOtpUseCase: SendOtpUseCase,
     private val authenticateOtpUseCase: AuthenticateOtpUseCase
 ) : ViewModel() {
     private val _createUserState =
-        MutableStateFlow<Resource<CreateUserWithPasswordResponse>>(Resource.Loading(null))
-    val createUserState: StateFlow<Resource<CreateUserWithPasswordResponse>> = _createUserState
+        MutableStateFlow<Resource<CreateUserWithPasswordResponseDto>>(Resource.Loading(null))
+    val createUserState: StateFlow<Resource<CreateUserWithPasswordResponseDto>> = _createUserState
 
     private val _updateUserState =
         MutableStateFlow<Resource<UpdateUserResponseDto>>(Resource.Loading(null))
     val updateUserState: StateFlow<Resource<UpdateUserResponseDto>> = _updateUserState
 
     private val _sendOtpState =
-        MutableStateFlow<Resource<SendOtpResponse>>(Resource.Loading(null))
-    val sendOtpState: StateFlow<Resource<SendOtpResponse>> = _sendOtpState
+        MutableStateFlow<Resource<SendOtpResponseDto>>(Resource.Loading(null))
+    val sendOtpState: StateFlow<Resource<SendOtpResponseDto>> = _sendOtpState
 
     private val _authenticateOtpState =
-        MutableStateFlow<Resource<AuthenticateOtpResponse>>(Resource.Loading(null))
-    val authenticateOtpState: StateFlow<Resource<AuthenticateOtpResponse>> = _authenticateOtpState
+        MutableStateFlow<Resource<AuthenticateOtpResponseDto>>(Resource.Loading(null))
+    val authenticateOtpState: StateFlow<Resource<AuthenticateOtpResponseDto>> = _authenticateOtpState
 
 
 
-    fun createUser(
-        createUserRequest: LoginRequest,
+    fun signUpUser(
+        createUserRequest: AuthRequest,
     ) {
         signUpUseCase(createUserRequest).onEach { result ->
             _createUserState.value = result
@@ -54,7 +54,7 @@ class OnboardingViewModel @Inject constructor(
         }.launchIn(viewModelScope)
     }
 
-    fun sendOtp(sendOtpRequest: SendOtpRequest) {
+    fun sendOtp(sendOtpRequest: EmailOnlyRequest) {
         sendOtpUseCase(sendOtpRequest).onEach { result ->
             _sendOtpState.value = result
         }.launchIn(viewModelScope)

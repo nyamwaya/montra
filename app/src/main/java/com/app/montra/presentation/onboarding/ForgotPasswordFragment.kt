@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.navigation.findNavController
 import com.app.montra.R
 import com.app.montra.databinding.FragmentForgotPasswordBinding
+import com.app.montra.util.isEmailValid
 
 class ForgotPasswordFragment : BaseFragment() {
 
@@ -23,8 +24,7 @@ class ForgotPasswordFragment : BaseFragment() {
 
     override fun setUpViews() {
         binding.toolbar.screenLabel.setText(R.string.forgot_password)
-        binding.btnContinue.btnGenericLarge.setText(R.string._continue)
-
+        binding.btnContinue.setText(R.string._continue)
     }
 
     override fun onClick() {
@@ -32,10 +32,18 @@ class ForgotPasswordFragment : BaseFragment() {
             //TODO: navigate back
         }
 
-        binding.btnContinue.btnGenericLarge.setOnClickListener {
-            val action = ForgotPasswordFragmentDirections.actionForgotPasswordFragmentToEmailSentFragment()
-            requireActivity().findNavController(R.id.nav_host_fragment).navigate(action)
+        binding.btnContinue.setOnClickListener {
+            if (isEmailValid(binding.emailEntry.text.toString())) {
+                val action = ForgotPasswordFragmentDirections.actionForgotPasswordFragmentToEmailSentFragment()
+                requireActivity().findNavController(R.id.nav_host_fragment).navigate(action)
+            }
         }
     }
 
+    private fun formValidation(){
+
+    }
+
 }
+
+

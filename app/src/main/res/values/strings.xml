@@ -90,4 +90,6 @@
     <string name="fragment_add_account_label">Add New Account Fragment</string>
     <string name="all_set">You are set!</string>
     <string name="fragment_reset_password_label">Reset Password_Fragment</string>
+    <string name="error_blank_field">*Email field must not be empty.</string>
+    <string name="error_blank_password_field">*Password field must not be empty.</string>
 </resources>

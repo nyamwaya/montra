@@ -2,7 +2,7 @@ package com.app.montra.domain.use_cases.authenticate_otp
 
 import com.app.montra.common.Resource
 import com.app.montra.data.remote.dto.AuthenticateOtpRequest
-import com.app.montra.data.remote.dto.AuthenticateOtpResponse
+import com.app.montra.data.remote.dto.AuthenticateOtpResponseDto
 import com.app.montra.domain.repository.StytchRepository
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
@@ -13,7 +13,7 @@ import javax.inject.Inject
 class AuthenticateOtpUseCase @Inject constructor(
     private val repository: StytchRepository
 ) {
-    operator fun invoke(requestBody: AuthenticateOtpRequest): Flow<Resource<AuthenticateOtpResponse>> =
+    operator fun invoke(requestBody: AuthenticateOtpRequest): Flow<Resource<AuthenticateOtpResponseDto>> =
         flow {
             try {
                 emit(Resource.Loading())

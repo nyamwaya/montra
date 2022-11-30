@@ -9,6 +9,18 @@ fun showSnackBar(msg: String, view: View, length: Int) {
     Snackbar.make(view, msg, length).show()
 }
 
-fun fromJson(string: String) : StytchErrorResponse{
+fun fromJson(string: String): StytchErrorResponse {
     return Gson().fromJson(string, StytchErrorResponse::class.java)
+}
+
+fun isEmailValid(toString: String): Boolean {
+    return true
+}
+
+fun isNameValid(): Boolean {
+    return true
+}
+
+fun isPasswordValid(){
+
 }

@@ -1,6 +1,6 @@
 package com.app.montra.data.remote.dto
 
-data class GetUserResponse(
+data class GetUserResponseDto(
     val status_code: Int,
     val request_id: String,
     val user_id: String,

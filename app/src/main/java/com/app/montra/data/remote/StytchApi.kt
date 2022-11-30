@@ -6,13 +6,13 @@ import retrofit2.http.*
 interface StytchApi {
     @POST("passwords")
     suspend fun signUp(
-        @Body requestBody: LoginRequest
-    ): CreateUserWithPasswordResponse
+        @Body requestBody: AuthRequest
+    ): CreateUserWithPasswordResponseDto
 
     @POST("passwords/authenticate")
     suspend fun login(
-        @Body requestBody: LoginRequest
-    ) : LoginResponse
+        @Body requestBody: AuthRequest
+    ) : LoginResponseDto
 
     @PUT("users/{userId}")
     suspend fun updateUser(
@@ -22,17 +22,22 @@ interface StytchApi {
 
     @PUT("otps/email/send")
     suspend fun sendOtp(
-        @Body requestBody: SendOtpRequest
-    ): SendOtpResponse
+        @Body requestBody: EmailOnlyRequest
+    ): SendOtpResponseDto
 
 
     @PUT("otps/authenticate")
     suspend fun authenticateOtp(
         @Body requestBody: AuthenticateOtpRequest
-    ): AuthenticateOtpResponse
+    ): AuthenticateOtpResponseDto
 
     @GET("users/{userId}")
     suspend fun getUser(
         @Path("userId") string: String
-    ) : GetUserResponse
+    ) : GetUserResponseDto
+
+    @POST("email/reset/start")
+    suspend fun resetPassword(
+        @Body resetPasswordRequest: EmailOnlyRequest
+    ) : ResetPasswordResponseDto
 }

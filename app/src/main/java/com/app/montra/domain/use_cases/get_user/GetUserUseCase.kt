@@ -1,8 +1,7 @@
 package com.app.montra.domain.use_cases.get_user
 
 import com.app.montra.common.Resource
-import com.app.montra.data.remote.dto.GetUserResponse
-import com.app.montra.data.remote.dto.LoginResponse
+import com.app.montra.data.remote.dto.GetUserResponseDto
 import com.app.montra.domain.repository.StytchRepository
 import kotlinx.coroutines.flow.flow
 import retrofit2.HttpException
@@ -12,7 +11,7 @@ import javax.inject.Inject
 class GetUserUseCase @Inject constructor(
     private val repository: StytchRepository
 ) {
-    operator fun invoke(userId: String): kotlinx.coroutines.flow.Flow<Resource<GetUserResponse>> =
+    operator fun invoke(userId: String): kotlinx.coroutines.flow.Flow<Resource<GetUserResponseDto>> =
         flow {
             try {
                 emit(Resource.Loading())

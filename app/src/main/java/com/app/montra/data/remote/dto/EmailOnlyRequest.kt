@@ -1,8 +1,5 @@
 package com.app.montra.data.remote.dto
 
-data class LoginRequest(
+data class EmailOnlyRequest(
     val email: String,
-    val password: String
 )
-
-
