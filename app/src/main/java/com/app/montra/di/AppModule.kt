@@ -37,7 +37,7 @@ object AppModule {
     @Singleton
     fun provideStytchApi(): StytchApi {
         return Retrofit.Builder()
-            .baseUrl(Constants.BASE_URL)
+            .baseUrl(Constants.BASE_DEV_URL)
             .addConverterFactory(GsonConverterFactory.create())
             .client(client)
             .build()

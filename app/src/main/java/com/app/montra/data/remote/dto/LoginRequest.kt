@@ -1,6 +1,6 @@
 package com.app.montra.data.remote.dto
 
-data class CreateUserWithPasswordRequest(
+data class LoginRequest(
     val email: String,
     val password: String
 )
