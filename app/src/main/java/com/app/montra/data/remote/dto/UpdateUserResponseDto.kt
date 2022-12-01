@@ -14,7 +14,8 @@ data class UpdateUserResponseDto(
 
 fun UpdateUserResponseDto.toUserModel() : UserModel{
     return UserModel(
-        emails = emails,
+        email = user.emails[0],
+        isEmailVerified = user.emails[0].verified,
         userId = user_id
     )
 }

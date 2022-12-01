@@ -2,11 +2,10 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/onboarding_nav_graph"
-    app:startDestination="@id/onboarding_fragment">
+    android:id="@+id/onboarding_nav_graph">
 
     <fragment
-        android:id="@+id/onboarding_fragment"
+        android:id="@+id/welcome_fragment"
         android:name="com.app.montra.presentation.onboarding.OnBoardingFragment"
         android:label="@string/onboarding_fragment_label"
         tools:layout="@layout/fragment_onboarding" >
@@ -26,7 +25,7 @@
 
         <action
             android:id="@+id/action_signup_fragment_to_verification_fragment"
-            app:destination="@id/verification_fragment" >
+            app:destination="@id/otp_verification_fragment" >
 
         </action>
     </fragment>
@@ -65,7 +64,7 @@
     </fragment>
 
     <fragment
-        android:id="@+id/verification_fragment"
+        android:id="@+id/otp_verification_fragment"
         android:name="com.app.montra.presentation.onboarding.VerificationFragment"
         android:label="@string/fragment_verification_label"
         tools:layout="@layout/fragment_verification" >

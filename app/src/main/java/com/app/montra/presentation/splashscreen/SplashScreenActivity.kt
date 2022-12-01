@@ -2,27 +2,48 @@ package com.app.montra.presentation.splashscreen
 
 import android.annotation.SuppressLint
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.activity.viewModels
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
-import com.app.montra.presentation.onboarding.OnboardingActivity
 import com.app.montra.R
+import com.app.montra.presentation.home.HomeActivity
+import com.app.montra.presentation.onboarding.OnboardingActivity
+import com.app.montra.util.fromJson
+import dagger.hilt.android.AndroidEntryPoint
 
 @SuppressLint("CustomSplashScreen")
+@AndroidEntryPoint
 class SplashScreenActivity : AppCompatActivity() {
+
+    private val viewModel by viewModels<SplashScreenViewModel>()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         installSplashScreen()
-
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash_screen)
+    }
 
-        // Check to see if user Id exists in shared prefs
-            // if there is no user, navigate to login page
-            // if there is a user, check to see if there is pin
-                //if pin, take them to home screen and finish this activity
-                // if no pin, navigate to the pin fragment
-        //
+    override fun onResume() {
+        super.onResume()
+        val userModelString = viewModel.mSharedPrefs.getUserModel()
+        if (userModelString.isNullOrEmpty()) {
+            navigateToOnboarding()
+        } else {
+            val userModel = fromJson(userModelString)
+            if (userModel.isEmailVerified) navigateHome() else navigateToOnboarding()
+        }
+    }
+
+    private fun navigateToOnboarding() {
         val intent = Intent(this, OnboardingActivity::class.java)
         startActivity(intent)
+        finish()
+    }
+
+    private fun navigateHome() {
+        val intent = Intent(this, HomeActivity::class.java)
+        startActivity(intent)
+        finish()
     }
 }

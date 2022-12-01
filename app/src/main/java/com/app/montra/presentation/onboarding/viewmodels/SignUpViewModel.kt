@@ -2,6 +2,7 @@ package com.app.montra.presentation.onboarding.viewmodels
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.app.montra.common.MontraPreferences
 import com.app.montra.common.Resource
 import com.app.montra.data.remote.dto.*
 import com.app.montra.domain.use_cases.authenticate_otp.AuthenticateOtpUseCase
@@ -20,7 +21,9 @@ class SignUpViewModel @Inject constructor(
     private val signUpUseCase: SignUpUseCase,
     private val updateUserUseCase: UpdateUserUseCase,
     private val sendOtpUseCase: SendOtpUseCase,
-    private val authenticateOtpUseCase: AuthenticateOtpUseCase
+    private val authenticateOtpUseCase: AuthenticateOtpUseCase,
+    sharedPrefs: MontraPreferences
+
 ) : ViewModel() {
     private val _createUserState =
         MutableStateFlow<Resource<CreateUserWithPasswordResponseDto>>(Resource.Loading(null))
@@ -38,6 +41,7 @@ class SignUpViewModel @Inject constructor(
         MutableStateFlow<Resource<AuthenticateOtpResponseDto>>(Resource.Loading(null))
     val authenticateOtpState: StateFlow<Resource<AuthenticateOtpResponseDto>> = _authenticateOtpState
 
+    val mSharedPrefs = sharedPrefs
 
 
     fun signUpUser(

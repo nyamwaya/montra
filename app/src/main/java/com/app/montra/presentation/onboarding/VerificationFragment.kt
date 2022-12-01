@@ -8,13 +8,13 @@ import android.view.ViewGroup
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.findNavController
-import androidx.navigation.fragment.navArgs
 import com.app.montra.R
 import com.app.montra.common.Resource
 import com.app.montra.data.remote.dto.AuthenticateOtpRequest
 import com.app.montra.data.remote.dto.EmailOnlyRequest
 import com.app.montra.databinding.FragmentVerificationBinding
 import com.app.montra.presentation.onboarding.viewmodels.SignUpViewModel
+import com.app.montra.util.fromJson
 import com.app.montra.util.showSnackBar
 import com.google.android.material.snackbar.Snackbar
 import kotlinx.coroutines.flow.launchIn
@@ -26,7 +26,7 @@ class VerificationFragment : BaseFragment() {
     private val binding get() = _binding!!
 
     private val viewModel by activityViewModels<SignUpViewModel>()
-    val args: VerificationFragmentArgs by navArgs()
+ //   private val userModel = if (viewModel.mSharedPrefs.getUserModel().isNullOrEmpty()) null else fromJson(viewModel.mSharedPrefs.getUserModel().toString())
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -39,9 +39,10 @@ class VerificationFragment : BaseFragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         observables()
+
         viewModel.sendOtp(
             EmailOnlyRequest(
-                email = args.userModel.emails[0].email
+                email = "alecksonnyamwaya@gmail.com"
             )
         )
     }
@@ -60,7 +61,7 @@ class VerificationFragment : BaseFragment() {
         binding.resendCode.setOnClickListener {
             viewModel.sendOtp(
                 EmailOnlyRequest(
-                    email = args.userModel.emails[0].email
+                    email = "alecksonnyamwaya@gmail.com"
                 )
             )
         }
@@ -73,7 +74,7 @@ class VerificationFragment : BaseFragment() {
                 is Resource.Loading -> Log.e(SignUpFragment::class.simpleName, "sending otp")
 
                 is Resource.Success -> {
-                  Log.e(SignUpFragment::class.simpleName, "otp sent")
+                    Log.e(SignUpFragment::class.simpleName, "otp sent")
                 }
                 is Resource.Error -> {
                     Log.e(SignUpFragment::class.simpleName, "error sending otp ")

@@ -12,7 +12,10 @@ import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import com.app.montra.R
 import com.app.montra.common.Resource
-import com.app.montra.data.remote.dto.*
+import com.app.montra.data.remote.dto.AuthRequest
+import com.app.montra.data.remote.dto.Name
+import com.app.montra.data.remote.dto.UpdateUserRequest
+import com.app.montra.data.remote.dto.toUserModel
 import com.app.montra.databinding.FragmentSignUpBinding
 import com.app.montra.domain.models.UserModel
 import com.app.montra.presentation.onboarding.viewmodels.SignUpViewModel
@@ -55,8 +58,15 @@ class SignUpFragment : BaseFragment() {
                 }
                 is Resource.Success -> {
                     Log.e(SignUpFragment::class.simpleName, "user created")
+                    viewModel.mSharedPrefs.setUserModel(
+                        UserModel(
+                            email = result.data!!.user.emails[0],
+                            isEmailVerified = result.data.user.emails[0].verified,
+                            userId = result.data.user_id,
+                        )
+                    )
                     viewModel.updateUser(
-                        result.data!!.user_id,
+                        result.data.user_id,
                         UpdateUserRequest(
                             name = Name(
                                 first_name = "Alex",
@@ -68,7 +78,6 @@ class SignUpFragment : BaseFragment() {
                     hideLoadingSpinner()
                     activateSignUpButton()
                 }
-
                 is Resource.Error -> {
                     Log.e(SignUpFragment::class.simpleName, "error creating user")
                     hideLoadingSpinner()
