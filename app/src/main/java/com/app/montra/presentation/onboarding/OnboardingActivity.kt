@@ -47,15 +47,20 @@ class OnboardingActivity : AppCompatActivity() {
         val navGraph = inflater.inflate(R.navigation.onboarding_nav_graph)
         val navController = navHostFragment.navController
 
-        var destination: Int = 0
 
-        if (userModel == null) {
+        val destination = if (userModel == null) {
             //this means the user user deleted app or its first time installing
-            destination = R.id.welcome_fragment
-        } else if (!userModel.isEmailVerified) {
+            R.id.welcome_fragment
+        } else {
+            // this means the user has an account but has not created a pin
+            R.id.user_pin_fragment
+        }
+
+/*      TODO: enable when otp endpoint works
+        else if (!userModel.isEmailVerified) {
             //if this is true we need the otp screen
             destination = R.id.otp_verification_fragment
-        }
+        }*/
 
         navGraph.setStartDestination(destination)
         navController.graph = navGraph

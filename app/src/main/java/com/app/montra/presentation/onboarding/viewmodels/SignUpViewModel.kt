@@ -58,7 +58,7 @@ class SignUpViewModel @Inject constructor(
         }.launchIn(viewModelScope)
     }
 
-    fun sendOtp(sendOtpRequest: EmailOnlyRequest) {
+    fun sendOtp(sendOtpRequest: EmailOtpDto) {
         sendOtpUseCase(sendOtpRequest).onEach { result ->
             _sendOtpState.value = result
         }.launchIn(viewModelScope)

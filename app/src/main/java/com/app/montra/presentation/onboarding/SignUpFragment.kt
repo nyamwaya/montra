@@ -95,7 +95,9 @@ class SignUpFragment : BaseFragment() {
                 is Resource.Success -> {
                     userModel = result.data!!.toUserModel()
                     Log.e(SignUpFragment::class.simpleName, "updated user")
-                    navigateToOtpScreen()
+                    navigateToUserPin()
+                    // Todo: enable when otp via email endpoint works
+                    //  navigateToOtpScreen()
                 }
 
                 is Resource.Error -> {
@@ -153,9 +155,15 @@ class SignUpFragment : BaseFragment() {
     private fun hideLoadingSpinner() {
 
     }
-
+    // Todo: enable when otp via email endpoint works
     private fun navigateToOtpScreen() {
         val action = SignUpFragmentDirections.actionSignupFragmentToVerificationFragment(userModel)
+        findNavController().navigate(action)
+
+    }
+
+    private fun navigateToUserPin() {
+        val action = SignUpFragmentDirections.actionSignupFragmentToUserPinFragment()
         findNavController().navigate(action)
 
     }

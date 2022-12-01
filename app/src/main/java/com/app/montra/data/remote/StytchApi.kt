@@ -22,7 +22,7 @@ interface StytchApi {
 
     @PUT("otps/email/send")
     suspend fun sendOtp(
-        @Body requestBody: EmailOnlyRequest
+        @Body requestBody: EmailOtpDto
     ): SendOtpResponseDto
 
 

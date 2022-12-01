@@ -28,6 +28,9 @@
             app:destination="@id/otp_verification_fragment" >
 
         </action>
+        <action
+            android:id="@+id/action_signup_fragment_to_user_pin_fragment"
+            app:destination="@id/user_pin_fragment" />
     </fragment>
 
     <fragment

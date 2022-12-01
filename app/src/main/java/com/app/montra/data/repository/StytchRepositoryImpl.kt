@@ -20,7 +20,7 @@ class StytchRepositoryImpl @Inject constructor(
         return api.updateUser(userId, requestBody)
     }
 
-    override suspend fun sendOtp(requestBody: EmailOnlyRequest): SendOtpResponseDto {
+    override suspend fun sendOtp(requestBody: EmailOtpDto): SendOtpResponseDto {
         return api.sendOtp(requestBody)
     }
 

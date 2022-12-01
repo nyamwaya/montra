@@ -10,6 +10,7 @@
 
 
 ## TechDebt: 
-1. track email verification
-2. Add pin to trusted metadata
-3. 
+1. Add pin to trusted data for login 
+2. track email verification
+3. Add pin to trusted metadata
+4. 
