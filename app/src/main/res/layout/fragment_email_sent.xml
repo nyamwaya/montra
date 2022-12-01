@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".presentation.onboarding.EmailSentFragment">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/email_flying_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/email_flying"
+        android:layout_marginTop="@dimen/margin32"
+        android:text="@string/hello_blank_fragment"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/email_sent_heading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/dark_100"
+        android:textSize="@dimen/textSize24"
+        android:fontFamily="@font/inter_600_semibold"
+        android:layout_marginTop="@dimen/margin18"
+        android:text="@string/email_sent_heading"
+        app:layout_constraintTop_toBottomOf="@id/email_flying_image"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/email_sent_subheading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/dark_25"
+        android:textSize="@dimen/textSize16"
+        android:fontFamily="@font/inter_500_medium"
+        android:textAlignment="center"
+        android:layout_marginTop="@dimen/margin18"
+        android:text="@string/email_sent_subheading"
+        app:layout_constraintTop_toBottomOf="@id/email_sent_heading"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <include
+        android:id="@+id/btn_back_to_email"
+        layout="@layout/btn_large_purple"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin32"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

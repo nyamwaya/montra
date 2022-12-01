@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "994380473674",
+    "project_id": "montra-cd887",
+    "storage_bucket": "montra-cd887.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:994380473674:android:dd2ce8895ca82ba911cdb3",
+        "android_client_info": {
+          "package_name": "com.app.montra"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "994380473674-m6nd1fkniqqjl693e67uikgamf3bsg0u.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.app.montra",
+            "certificate_hash": "94b30f6479e1d06e857ad900f80e2ad0fcae391a"
+          }
+        },
+        {
+          "client_id": "994380473674-kthn3nbgtsr221skpcnofi0phvdc2vo5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAeb6QV7dFcSgZE-zqn72arxNyjP6VoxdU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "994380473674-kthn3nbgtsr221skpcnofi0phvdc2vo5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

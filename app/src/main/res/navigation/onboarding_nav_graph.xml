@@ -2,12 +2,11 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/onboarding_nav_graph"
-    app:startDestination="@id/onboarding_fragment">
+    android:id="@+id/onboarding_nav_graph">
 
     <fragment
-        android:id="@+id/onboarding_fragment"
-        android:name="com.app.montra.onboarding.OnBoardingFragment"
+        android:id="@+id/welcome_fragment"
+        android:name="com.app.montra.presentation.onboarding.OnBoardingFragment"
         android:label="@string/onboarding_fragment_label"
         tools:layout="@layout/fragment_onboarding" >
         <action
@@ -20,14 +19,109 @@
 
     <fragment
         android:id="@+id/signup_fragment"
-        android:name="com.app.montra.onboarding.SignUpFragment"
+        android:name="com.app.montra.presentation.onboarding.SignUpFragment"
         android:label="@string/signup_fragment_label"
-        tools:layout="@layout/fragment_sign_up" />
+        tools:layout="@layout/fragment_sign_up" >
+
+        <action
+            android:id="@+id/action_signup_fragment_to_verification_fragment"
+            app:destination="@id/otp_verification_fragment" >
+
+        </action>
+        <action
+            android:id="@+id/action_signup_fragment_to_user_pin_fragment"
+            app:destination="@id/user_pin_fragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/login_fragment"
-        android:name="com.app.montra.onboarding.LoginFragment"
+        android:name="com.app.montra.presentation.onboarding.LoginFragment"
         android:label="@string/login_fragment_label"
-        tools:layout="@layout/fragment_login" />
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_login_fragment_to_forgot_password_fragment"
+            app:destination="@id/forgot_password_fragment" />
+        <action
+            android:id="@+id/action_login_fragment_to_reset_password_fragment"
+            app:destination="@id/reset_password_fragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/forgot_password_fragment"
+        android:name="com.app.montra.presentation.onboarding.ForgotPasswordFragment"
+        android:label="@string/forgot_password_fragment_label"
+        tools:layout="@layout/fragment_forgot_password" >
+        <action
+            android:id="@+id/action_forgot_password_fragment_to_email_sent_fragment"
+            app:destination="@id/email_sent_fragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/email_sent_fragment"
+        android:name="com.app.montra.presentation.onboarding.EmailSentFragment"
+        android:label="@string/email_sent_fragment_label"
+        tools:layout="@layout/fragment_email_sent" >
+        <action
+            android:id="@+id/action_email_sent_fragment_to_login_fragment"
+            app:destination="@id/login_fragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/otp_verification_fragment"
+        android:name="com.app.montra.presentation.onboarding.VerificationFragment"
+        android:label="@string/fragment_verification_label"
+        tools:layout="@layout/fragment_verification" >
+
+        <action
+            android:id="@+id/action_verification_fragment_to_user_pin_fragment"
+            app:destination="@id/user_pin_fragment" />
+        <argument
+            android:name="userModel"
+            app:argType="com.app.montra.domain.models.UserModel" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/user_pin_fragment"
+        android:name="com.app.montra.presentation.onboarding.PinEntryFragment"
+        android:label="@string/fragment_pin_entry_label"
+        tools:layout="@layout/fragment_pin_entry" >
+        <action
+            android:id="@+id/action_user_pin_fragment_to_account_setup_fragment"
+            app:destination="@id/account_setup_fragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/account_setup_fragment"
+        android:name="com.app.montra.presentation.onboarding.SetUpAccountFragment"
+        android:label="@string/fragment_setup_label"
+        tools:layout="@layout/fragment_set_up_account" >
+        <action
+            android:id="@+id/action_account_setup_fragment_to_add_new_account_fragment"
+            app:destination="@id/add_new_account_fragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/add_new_account_fragment"
+        android:name="com.app.montra.presentation.onboarding.AddNewAccountFragment"
+        android:label="@string/fragment_add_account_label"
+        tools:layout="@layout/fragment_add_new_account" >
+        <action
+            android:id="@+id/action_add_new_account_fragment_to_setup_success_fragment"
+            app:destination="@id/setup_success_fragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/setup_success_fragment"
+        android:name="com.app.montra.presentation.onboarding.SetupFinishedFragment"
+        android:label="@string/fragment_setup_success_label"
+        tools:layout="@layout/fragment_setup_finished" >
+    </fragment>
+
+    <fragment
+        android:id="@+id/reset_password_fragment"
+        android:name="com.app.montra.presentation.onboarding.ResetPasswordFragment"
+        android:label="@string/fragment_reset_password_label"
+        tools:layout="@layout/fragment_reset_password" >
+    </fragment>
 
 </navigation>

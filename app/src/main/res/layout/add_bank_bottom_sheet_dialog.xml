@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/persistent_bottom_sheet"
+    android:layout_marginHorizontal="@dimen/margin16">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/email"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:background="@null"
+        android:layout_marginBottom="@dimen/margin16"
+        tools:hint="Chase"
+        app:boxStrokeWidth="0dp"
+        app:boxStrokeWidthFocused="0dp"
+        app:layout_constraintBottom_toTopOf="@id/selected_bank_label">
+
+        <com.google.android.material.textfield.TextInputEditText
+            style="@style/EditTextStyle"
+            android:layout_height="wrap_content" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/selected_bank_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:fontFamily="@font/inter_500_medium"
+        android:text="@string/bank_label"
+        android:textColor="@color/black"
+        android:textSize="@dimen/textSize16"
+        app:layout_constraintBottom_toTopOf="@+id/chase_bank"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/chase_bank"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin8"
+        android:background="@drawable/bank_selected_bg"
+        android:paddingHorizontal="@dimen/padding28"
+        android:paddingVertical="@dimen/padding8"
+        android:src="@drawable/chase"
+        app:layout_constraintBottom_toTopOf="@+id/generic_bank"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/generic_bank"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin24"
+        android:background="@drawable/bank_unselected_bg"
+        android:paddingHorizontal="@dimen/padding28"
+        android:paddingVertical="@dimen/padding8"
+        android:src="@drawable/pay_pal"
+        app:layout_constraintBottom_toTopOf="@+id/btn_continue"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <include
+        android:id="@+id/btn_continue"
+        layout="@layout/btn_large_purple"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin16"
+        android:paddingStart="@dimen/padding16"
+        android:paddingTop="@dimen/padding16"
+        android:paddingEnd="@dimen/padding16"
+        android:paddingBottom="@dimen/padding16"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

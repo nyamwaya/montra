@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/violet_100"
+    tools:context=".presentation.onboarding.PinEntryFragment">
+
+<!--    &lt;!&ndash; TODO: Update blank fragment layout &ndash;&gt;-->
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/pin_entry_heading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin46"
+        android:fontFamily="@font/inter_600_semibold"
+        android:text="@string/setup_pin_heading"
+        android:textColor="@color/light_80"
+        android:textSize="@dimen/textSize18"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/pin_entry_edit"
+        android:layout_width="match_parent"
+        android:layout_marginHorizontal="91dp"
+        android:layout_marginTop="@dimen/margin92"
+        app:layout_constraintTop_toBottomOf="@+id/pin_entry_heading"
+        android:layout_height="wrap_content">
+
+        <com.app.montra.presentation.PinEntryEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/light_80"
+            android:cursorVisible="true"
+            android:digits="1234567890"
+            android:focusable="true"
+            android:inputType="number|numberPassword"
+            android:maxLength="4"
+            android:textColor="@color/light_80"
+            android:textIsSelectable="false"
+            android:textSize="15sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/one"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/one"
+        android:textSize="@dimen/textSize48"
+        android:textColor="@color/light_80"
+        android:fontFamily="@font/inter_500_medium"
+        android:paddingHorizontal="@dimen/padding47"
+        android:paddingVertical="@dimen/padding16"
+        app:layout_constraintBottom_toTopOf="@+id/four"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/two"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/two"
+        android:textSize="@dimen/textSize48"
+        android:textColor="@color/light_80"
+        android:fontFamily="@font/inter_500_medium"
+        android:paddingHorizontal="@dimen/padding47"
+        android:paddingVertical="@dimen/padding16"
+        app:layout_constraintBottom_toTopOf="@+id/five"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/three"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/three"
+        android:textSize="@dimen/textSize48"
+        android:textColor="@color/light_80"
+        android:fontFamily="@font/inter_500_medium"
+        android:paddingHorizontal="@dimen/padding47"
+        android:paddingVertical="@dimen/padding16"
+        app:layout_constraintBottom_toTopOf="@+id/six"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/four"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/four"
+        android:textSize="@dimen/textSize48"
+        android:textColor="@color/light_80"
+        android:fontFamily="@font/inter_500_medium"
+        android:paddingHorizontal="@dimen/padding47"
+        android:paddingVertical="@dimen/padding16"
+        app:layout_constraintBottom_toTopOf="@+id/seven"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/five"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/five"
+        android:textSize="@dimen/textSize48"
+        android:textColor="@color/light_80"
+        android:fontFamily="@font/inter_500_medium"
+        android:paddingHorizontal="@dimen/padding47"
+        android:paddingVertical="@dimen/padding16"
+        app:layout_constraintBottom_toTopOf="@+id/eight"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/six"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/six"
+        android:textSize="@dimen/textSize48"
+        android:textColor="@color/light_80"
+        android:fontFamily="@font/inter_500_medium"
+        android:paddingHorizontal="@dimen/padding47"
+        android:paddingVertical="@dimen/padding16"
+        app:layout_constraintBottom_toTopOf="@+id/nine"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/seven"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/seven"
+        android:textSize="@dimen/textSize48"
+        android:textColor="@color/light_80"
+        android:fontFamily="@font/inter_500_medium"
+        android:paddingHorizontal="@dimen/padding47"
+        android:paddingVertical="@dimen/padding16"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/zero"/>
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/eight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/eight"
+        android:textSize="@dimen/textSize48"
+        android:textColor="@color/light_80"
+        android:fontFamily="@font/inter_500_medium"
+        android:paddingHorizontal="@dimen/padding47"
+        android:paddingVertical="@dimen/padding16"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/zero"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/nine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/nine"
+        android:textSize="@dimen/textSize48"
+        android:textColor="@color/light_80"
+        android:fontFamily="@font/inter_500_medium"
+        android:paddingHorizontal="@dimen/padding47"
+        android:paddingVertical="@dimen/padding16"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/zero"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/zero"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/zero"
+        android:textSize="@dimen/textSize48"
+        android:textColor="@color/light_80"
+        android:fontFamily="@font/inter_500_medium"
+        android:paddingHorizontal="@dimen/padding47"
+        android:paddingVertical="@dimen/padding16"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/continue_arrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/arrow_right"
+        android:paddingHorizontal="@dimen/padding47"
+        android:paddingVertical="@dimen/padding16"
+        app:layout_constraintStart_toEndOf="@+id/zero"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginHorizontal="@dimen/margin16"
+    tools:context=".presentation.onboarding.SetUpAccountFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:id="@+id/account_setup_heading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/inter_500_medium"
+        android:textSize="@dimen/textSize36"
+        android:textColor="@color/dark_50"
+        android:layout_marginTop="@dimen/margin67"
+        android:text="@string/account_setup_heading"
+        android:textAlignment="textStart"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/account_setup_subheading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/inter_500_medium"
+        android:textSize="@dimen/textSize14"
+        android:textColor="@color/dark_25"
+        android:layout_marginTop="@dimen/margin37"
+        android:text="@string/account_setup_subheading"
+        android:textAlignment="textStart"
+        app:layout_constraintTop_toBottomOf="@id/account_setup_heading" />
+
+    <include
+        android:id="@+id/btn_lets_go"
+        layout="@layout/btn_large_purple"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin16"
+        android:layout_marginHorizontal="@dimen/margin16"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,6 +1,18 @@
 <resources>
     <string name="app_name">montra</string>
 
+    <!--generic-->
+    <string name="_continue">Continue</string>
+    <string name="ok">OK</string>
+    <string name="lets_go">Let\'s go</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!--stytch api-->
+    <string name="test_test_stytch_endpoint">https://test.stytch.com/v1/passwords</string>
+    <string name="test_stytch_project_id">project-test-8b6f9f80-0c3c-4120-b0bc-7a67a28c1945</string>
+    <string name="test_stytch_secret_id">secret-test-pVXGw0HHCFiwJeAXykwVQPCQd8wNFcjTkUU=</string>
+    <string name="test_stytch_public_token">public-token-test-2d0069a9-5308-4291-98fd-16dc103f1d96</string>
+
     <!--On-boarding-->
     <string name="onboarding_fragment_label">Onboardign Fragment</string>
     <string name="onboard_screen_one_heading">Gain total control \n of your money</string>
@@ -13,11 +25,80 @@
     <!--Sign Up Strings-->
     <string name="signup_fragment_label">SignUp Fragment</string>
     <string name="signup">Sign Up</string>
+    <string name="with_google">Sign Up with Google</string>
     <string name="login">Login</string>
 
     <!--Login Strings-->
     <string name="login_fragment_label">Login Fragment</string>
 
     <string name="accesibility_image_of_paper">image of paper</string>
+    <string name="placeholder_holder_name">Name</string>
+    <string name="placeholder_email">Email</string>
+    <string name="placeholder_holder_password">Password</string>
+    <string name="sign_up_legal_warning">By signing up, you agree to the Terms of Service\n and Privacy Policy.</string>
+    <string name="or_with">Or with</string>
+    <string name="already_have">Already have an account? Login</string>
+    <string name="sign_up_with_google">Sign Up with Google</string>
 
+    <!--Forgot password-->
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="forgot_password_description">Don’t worry. Enter your email and we’ll send you a link to reset your password.</string>
+    <string name="email_sent_heading">Your email is on the way</string>
+    <string name="email_sent_subheading">Check your email test@test.com and \nfollow the instructions to reset your \npassword</string>
+    <string name="forgot_password_fragment_label">Forgot Password Fragment</string>
+    <string name="email_sent_fragment_label">Email SentFragment</string>
+    <string name="back_to_login">Back to Login</string>
+
+    <!--Reset Password-->
+    <string name="new_password">New Password</string>
+    <string name="retype_password">Retype Password</string>
+    <string name="dont_have_account">Don\'t have an account yet? Sign Up</string>
+
+    <!--Verify 2fa-->
+    <string name="enter_code">Enter your Verification Code</string>
+    <string name="resend_code">I didn’t received the code? Send again</string>
+    <string name="code_sent">We send verification code to your \nemail brajaoma*****@gmail.com. You can \ncheck your inbox.</string>
+    <string name="placeholder_timer">0:00</string>
+    <string name="verification">Verification</string>
+    <string name="fragment_verification_label">Verification Fragment</string>
+    <string name="verify">Verify</string>
+
+    <!--Pin Entry-->
+    <string name="setup_pin_heading">Let\'s setup your pin</string>
+    <string name="zero">0</string>
+    <string name="one">1</string>
+    <string name="two">2</string>
+    <string name="three">3</string>
+    <string name="four">4</string>
+    <string name="five">5</string>
+    <string name="six">6</string>
+    <string name="seven">7</string>
+    <string name="eight">8</string>
+    <string name="nine">9</string>
+    <string name="fragment_pin_entry_label">Enter Pin Fragment</string>
+
+
+    <!--Account Setup-->
+    <string name="account_setup_heading">Let’s setup your account!</string>
+    <string name="account_setup_subheading">Account can be your bank, credit card or your wallet.</string>
+    <string name="add_account">Add new account</string>
+    <string name="add_account_balance">Balance</string>
+    <string name="bank_label">Bank</string>
+    <string name="account_balance_placeholder">$0.00</string>
+    <string name="fragment_setup_label">Setup Account</string>
+    <string name="fragment_setup_success_label">Setup Success Fragment</string>
+    <string name="fragment_add_account_label">Add New Account Fragment</string>
+    <string name="all_set">You are set!</string>
+    <string name="fragment_reset_password_label">Reset Password_Fragment</string>
+    <string name="error_blank_field">*Email field must not be empty.</string>
+    <string name="error_blank_password_field">*Password field must not be empty.</string>
+    <string name="title_activity_home">HomeActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
 </resources>

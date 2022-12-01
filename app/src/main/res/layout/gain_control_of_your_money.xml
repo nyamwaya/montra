@@ -20,7 +20,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
-        android:fontFamily="@font/inter_bold"
+        android:fontFamily="@font/inter_bold_700"
         android:text="@string/onboard_screen_one_heading"
         android:textAlignment="center"
         android:textColor="@color/dark_50"
